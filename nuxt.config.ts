@@ -1,7 +1,7 @@
 import tailwindConfig from "./tailwind.config";
 
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/i18n"],
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
@@ -18,5 +18,13 @@ export default defineNuxtConfig({
     public: {
       apiBase: "/api",
     },
+  },
+  i18n: {
+    vueI18n: './i18n.config.ts',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    }
   },
 });

@@ -1,3 +1,7 @@
 <template>
-  <div>This is a home page</div>
+    <div>
+        <Navbar></Navbar>
+    </div>
 </template>
+
+<script></script>

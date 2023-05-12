@@ -1,13 +1,13 @@
 <template>
-  <div class="theme">
-    <NuxtPage></NuxtPage>
-  </div>
+    <NuxtLayout>
+        <NuxtPage></NuxtPage>
+    </NuxtLayout>
 </template>
 
 <style lang="scss">
 body,
 html {
-  background-color: var(--background-1);
-  color: var(--primary-text);
+    background-color: var(--background-1);
+    color: var(--primary-text);
 }
 </style>

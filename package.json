@@ -10,14 +10,16 @@
     "format": "npx prettier --write ."
   },
   "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0-beta.12",
     "@nuxtjs/tailwindcss": "^6.6.7",
     "@types/node": "^18",
     "nuxt": "^3.4.3"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.9",
+    "aos": "^2.3.4",
     "pinia": "^2.0.35",
     "sass": "^1.62.1",
-    "vue": "^3.2.47"
+    "vue": "^3.3.1"
   }
 }
