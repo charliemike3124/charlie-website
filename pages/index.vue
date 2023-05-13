@@ -3,5 +3,6 @@
         <SectionNavBar />
         <SectionLandingPageCta />
         <SectionSolutions data-aos="fade-in" />
+        <SectionAboutMe data-aos="fade-in" />
     </div>
 </template>

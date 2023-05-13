@@ -1,5 +1,5 @@
 <template>
-    <section class="mt-28" id="solutions">
+    <section class="mt-14 sm:mt-28" id="solutions">
         <p class="text-3xl font-bold">Solutions</p>
         <UiDivider class="mt-3 mb-10" />
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
