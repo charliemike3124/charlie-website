@@ -1,5 +1,5 @@
 <template>
-    <div ref="cardRef" class="card-gradient-on-hover">
+    <div ref="cardRef" class="card-gradient-on-hover shadow-md rounded-md overflow-hidden">
         <slot></slot>
     </div>
 </template>
@@ -13,8 +13,8 @@ onMounted(() => {
             x = e.clientX - rect.left,
             y = e.clientY - rect.top;
 
-            cardRef.value.style.setProperty('--mouse-x', `${x}px`);
-            cardRef.value.style.setProperty('--mouse-y', `${y}px`);
+        cardRef.value.style.setProperty('--mouse-x', `${x}px`);
+        cardRef.value.style.setProperty('--mouse-y', `${y}px`);
     };
 });
 </script>
@@ -39,7 +39,7 @@ onMounted(() => {
     top: 0px;
     transition: opacity 500ms;
     width: 100%;
-    pointer-events:none;
+    pointer-events: none;
 }
 
 .card-gradient-on-hover::before {

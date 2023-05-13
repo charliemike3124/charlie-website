@@ -1,8 +1,7 @@
 <template>
-    <div>
-        <Navbar />
-        <LandingPageCta />
+    <div class="mb-48">
+        <SectionNavBar />
+        <SectionLandingPageCta />
+        <SectionSolutions data-aos="fade-in" />
     </div>
 </template>
-
-<style lang="scss"></style>
