@@ -39,10 +39,3 @@ const links = computed(() => [
     },
 ]);
 </script>
-
-<style lang="scss" scoped>
-.show {
-    width: 100%;
-    border: solid 1px white;
-}
-</style>

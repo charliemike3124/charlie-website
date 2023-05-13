@@ -1,5 +1,5 @@
 {
-    "functions": { "source": ".output/server" },
+    "functions": { "source": ".output/server", "runtime": "nodejs18" },
     "hosting": {
         "site": "charlie-website-c6367",
         "public": ".output/public",
