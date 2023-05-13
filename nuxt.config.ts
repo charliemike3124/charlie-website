@@ -4,11 +4,20 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/i18n"],
 
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
     head: {
       // @ts-ignore
       style: [{ children: tailwindConfig.cssRootVars, type: "text/css" }],
     },
+  },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/global.scss" as *;'
+        }
+      }
+    }
   },
 
   runtimeConfig: {
@@ -19,8 +28,10 @@ export default defineNuxtConfig({
       apiBase: "/api",
     },
   },
+
   i18n: {
     vueI18n: './i18n.config.ts',
+    defaultLocale: 'en',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',

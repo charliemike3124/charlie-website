@@ -18,18 +18,32 @@ const theme = {
       "button-4": "#0077CA",
     },
   },
+  screens: {
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
+    "2xl": "1536px",
+  },
 };
 
 const cssRootVars = (() => {
   let css = ":root {\n";
   for (const colorKey in theme.extend.colors) {
     const colorValue = theme.extend.colors[colorKey];
-    css += `  --${colorKey}: ${colorValue};`;
+    css += `  --${colorKey}: ${colorValue};\n`;
   }
+
+  for (const screenKey in theme.screens) {
+    const screenValue = theme.screens[screenKey];
+    css += `  --${screenKey}: ${screenValue};\n`;
+  }
+
   css += "}";
 
   return css;
 })();
+
 
 export default {
   theme,
