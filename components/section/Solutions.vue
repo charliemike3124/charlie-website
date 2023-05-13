@@ -79,6 +79,7 @@ const solutions = [
 
 <style lang="scss" scoped>
 .card {
+    background: linear-gradient(to bottom right, #001528, #002b5c);
     min-height: 420px;
 }
 </style>
