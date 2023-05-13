@@ -9,6 +9,7 @@
         "postinstall": "nuxt prepare",
         "format": "npx prettier --write ."
     },
+    "type": "module",
     "devDependencies": {
         "@nuxtjs/i18n": "^8.0.0-beta.12",
         "@nuxtjs/tailwindcss": "^6.6.7",
