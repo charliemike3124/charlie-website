@@ -3,22 +3,43 @@
 </template>
 
 <script setup>
+const props = defineProps({
+    show: Boolean,
+});
+
 const borderRef = ref(null);
 
 onMounted(() => {
-    borderRef.value.parentNode.classList.add('relative');
-    borderRef.value.parentNode.classList.add('flex');
-    borderRef.value.parentNode.classList.add('justify-center');
-    borderRef.value.parentNode.addEventListener('mouseenter', () => showBorder());
-    borderRef.value.parentNode.addEventListener('mouseleave', () => hideBorder());
+    nextTick(() => {
+        borderRef.value.parentNode.classList.add('relative');
+        borderRef.value.parentNode.classList.add('flex');
+        borderRef.value.parentNode.classList.add('justify-center');
+        borderRef.value.parentNode.addEventListener('mouseenter', () => showBorder());
+        borderRef.value.parentNode.addEventListener('mouseleave', () => hideBorder());
+    });
+
+    if (props.show) {
+        showBorder();
+    }
 });
 
 function showBorder() {
     borderRef.value.classList.add('show');
 }
 function hideBorder() {
-    borderRef.value.classList.remove('show');
+    if (!props.show) borderRef.value.classList.remove('show');
 }
+
+watch(
+    () => props.show,
+    (newVal) => {
+        if (newVal) {
+            showBorder();
+        } else {
+            hideBorder();
+        }
+    }
+);
 </script>
 
 <style lang="scss" scoped>

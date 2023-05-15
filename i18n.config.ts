@@ -5,12 +5,11 @@ export default defineI18nConfig(() => ({
         en: {
             welcome1: "Hi, I'm Charlie Villalobos 👋",
             welcome2: {
-                A: 'A versatile ',
-                B: 'expert  and ',
-                C: 'full-stack engineer ',
-                D: 'crafting exceptional web experiences.',
+                A: "Looking to build an exceptional website? I'm a  ",
+                B: 'Web Engineer',
+                C: 'specialized in crafting seamless user experiences.',
             },
-            welcome3: 'Contact me if you need any help!',
+            welcome3: "Let's create something amazing together!",
             buttons: {
                 contactMe: 'Contact Me',
             },
@@ -19,16 +18,21 @@ export default defineI18nConfig(() => ({
                 solutions: 'Solutions',
                 contact: 'Contact',
             },
+            solutions: {
+                all: 'All',
+                webApps: 'Web-Apps',
+                ecommerce: 'E-Commerce',
+                blogs: 'Blogs',
+            },
         },
         es: {
             welcome1: 'Hola, soy Charlie Villalobos 👋',
             welcome2: {
-                A: 'Un versatil experto en ',
-                B: 'e ',
-                C: 'ingeniero full-stack ',
-                D: 'forjando experiencias web exceptionales.',
+                A: '¿Buscas crear un sitio web excepcional? Soy un ',
+                B: 'Ingeniero Web',
+                C: 'especializado en forjar las mejores experiencias de usuario.',
             },
-            welcome3: '¡Contáctame si necesitas ayuda!',
+            welcome3: '¡Creemos algo increíble!',
             buttons: {
                 contactMe: 'Contáctame',
             },
