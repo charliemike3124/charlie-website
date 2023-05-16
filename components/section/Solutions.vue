@@ -2,20 +2,20 @@
     <section class="mt-14 sm:mt-28" id="solutions">
         <p class="text-3xl font-bold">Solutions</p>
         <UiDivider class="mt-3 mb-10" />
-        <p class="flex gap-4 mb-5">
-            <span class="cursor-pointer" @click="currentFilter = 'All'"
-                >{{ $t('solutions.all') }}<UiHoverUnderline :show="currentFilter === 'All'" />
-            </span>
-            <span class="cursor-pointer" @click="currentFilter = 'Web-Apps'"
-                >{{ $t('solutions.webApps') }}<UiHoverUnderline :show="currentFilter === 'Web-Apps'"
-            /></span>
-            <span class="cursor-pointer" @click="currentFilter = 'E-commerce'"
-                >{{ $t('solutions.ecommerce') }}<UiHoverUnderline :show="currentFilter === 'E-commerce'"
-            /></span>
-            <span class="cursor-pointer" @click="currentFilter = 'Blogs'"
-                >{{ $t('solutions.blogs') }}<UiHoverUnderline :show="currentFilter === 'Blogs'"
-            /></span>
-        </p>
+        <div class="flex gap-4 mb-5">
+            <div class="cursor-pointer" @click="currentFilter = 'All'">
+                {{ $t('solutions.all') }}<UiHoverUnderline :show="currentFilter === 'All'" />
+            </div>
+            <div class="cursor-pointer" @click="currentFilter = 'Web-Apps'">
+                {{ $t('solutions.webApps') }}<UiHoverUnderline :show="currentFilter === 'Web-Apps'" />
+            </div>
+            <div class="cursor-pointer" @click="currentFilter = 'E-commerce'">
+                {{ $t('solutions.ecommerce') }}<UiHoverUnderline :show="currentFilter === 'E-commerce'" />
+            </div>
+            <div class="cursor-pointer" @click="currentFilter = 'Blogs'">
+                {{ $t('solutions.blogs') }}<UiHoverUnderline :show="currentFilter === 'Blogs'" />
+            </div>
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
             <transition-group name="card" mode="out-in">
                 <UiCardHoverGradient v-for="sol in solutions" :key="sol.title" class="card border-2">
@@ -52,6 +52,7 @@ import mibanco from '@/assets/mibanco.webp';
 import fundaciondelamujer from '@/assets/fundaciondelamujer.jpg';
 import pcfactory from '@/assets/pcfactory.jpg';
 import duranyalvarez from '@/assets/duranyalvarez.jpg';
+
 const unfilteredSolutions = [
     {
         title: 'Peoplefinders',
@@ -114,11 +115,11 @@ const solutions = computed(() => {
 }
 .card-enter-active,
 .card-leave-active {
-  transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
 }
 
 .card-enter-from,
 .card-leave-to {
-  opacity: 0;
+    opacity: 0;
 }
 </style>
