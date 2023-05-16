@@ -7,6 +7,11 @@ export default defineNuxtConfig({
         head: {
             // @ts-ignore
             style: [{ children: tailwindConfig.cssRootVars, type: 'text/css' }],
+            script: [
+              {
+                src: 'https://smtpjs.com/v3/smtp.js'
+              }
+            ],
         },
     },
 

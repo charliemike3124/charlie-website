@@ -17,15 +17,14 @@
                     </p>
                     <p class="text-3xl mb-4" data-aos="fade-left" data-aos-delay="600">{{ $t('welcome3') }}</p>
                 </div>
-                <a href="mailto:carlosvillalobos1047@gmail.com">
-                    <button
-                        data-aos="fade-left"
-                        data-aos-delay="800"
-                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md shadow-lg my-4 z-10 w-32"
-                    >
-                        {{ $t('buttons.contactMe') }}
-                    </button>
-                </a>
+                <button
+                    @click="sendEmail"
+                    data-aos="fade-left"
+                    data-aos-delay="800"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md shadow-lg my-4 z-10 w-32"
+                >
+                    {{ $t('buttons.contactMe') }}
+                </button>
                 <div class="flex gap-2" data-aos="fade-left" data-aos-delay="1000">
                     <a :href="contactLinks.linkedin" target="_blank">
                         <UiIcon icon="linkedin" class="cursor-pointer" />
@@ -44,6 +43,16 @@ const contactLinks = {
     linkedin: 'https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US',
     github: 'https://github.com/charliemike3124',
 };
+
+const mail = useFirebaseEmail();
+console.log(mail.sendEmail)
+function sendEmail() {
+    mail.sendEmail({
+        to: 'carlosvillalobos1047@gmail.com',
+        subject: 'test',
+        html: 'holardo',
+    });
+}
 </script>
 
 <style lang="scss" scoped>

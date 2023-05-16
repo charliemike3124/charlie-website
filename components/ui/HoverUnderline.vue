@@ -10,13 +10,11 @@ const props = defineProps({
 const borderRef = ref(null);
 
 onMounted(() => {
-    nextTick(() => {
-        borderRef.value.parentNode.classList.add('relative');
-        borderRef.value.parentNode.classList.add('flex');
-        borderRef.value.parentNode.classList.add('justify-center');
-        borderRef.value.parentNode.addEventListener('mouseenter', () => showBorder());
-        borderRef.value.parentNode.addEventListener('mouseleave', () => hideBorder());
-    });
+    borderRef.value.parentNode.classList.add('relative');
+    borderRef.value.parentNode.classList.add('flex');
+    borderRef.value.parentNode.classList.add('justify-center');
+    borderRef.value.parentNode.addEventListener('mouseenter', () => showBorder());
+    borderRef.value.parentNode.addEventListener('mouseleave', () => hideBorder());
 
     if (props.show) {
         showBorder();

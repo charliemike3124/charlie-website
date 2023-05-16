@@ -14,8 +14,8 @@ export default defineI18nConfig(() => ({
                 contactMe: 'Contact Me',
             },
             navBar: {
-                aboutMe: 'About Me',
                 solutions: 'Solutions',
+                consulting: 'Consulting',
                 contact: 'Contact',
             },
             solutions: {
@@ -37,8 +37,8 @@ export default defineI18nConfig(() => ({
                 contactMe: 'Contáctame',
             },
             navBar: {
-                aboutMe: 'Sobre mí',
-                solutions: 'Soluciones',
+                solutions: 'Solutions',
+                consulting: 'Consultoría',
                 contact: 'Contacto',
             },
         },

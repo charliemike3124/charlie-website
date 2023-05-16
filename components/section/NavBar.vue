@@ -30,12 +30,12 @@ const links = computed(() => [
         href: '#solutions',
     },
     {
-        name: t('navBar.aboutMe'),
-        href: '#',
+        name: t('navBar.consulting'),
+        href: '#consulting',
     },
     {
         name: t('navBar.contact'),
-        href: '#',
+        href: '#contact',
     },
 ]);
 </script>
