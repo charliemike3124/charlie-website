@@ -1,40 +1,46 @@
 <template>
     <section>
-        <UiCardHoverGradient class="card mt-4">
-            <img
-                data-aos="fade-right"
-                data-aos-delay="200"
-                src="~//assets/me-nobg.png"
-                alt="charlie villalobos img"
-                class="lg:visible invisible absolute bottom-0 left-6"
-            />
-            <div class="ml-6 h-full p-4 sm:p-10 flex flex-col justify-center">
+        <div class="card text-secondary-text flex flex-col items-center">
+            <div class="h-full pr-8 py-2 flex flex-col text-center self-center">
                 <div>
-                    <p class="text-3xl mb-4" data-aos="fade-left" data-aos-delay="200">{{ $t('welcome1') }}</p>
-                    <p class="text-3xl mb-4" data-aos="fade-left" data-aos-delay="400">
-                        {{ $t('welcome2.A') }} <span class="text-green-400 font-bold">{{ $t('welcome2.B') }}</span>
-                        {{ $t('welcome2.C') }}
+                    <p class="mb-4 text-5xl font-bold" data-aos="fade-right" data-aos-delay="200">
+                        {{ $t('ctaHeading') }}
                     </p>
-                    <p class="text-3xl mb-4" data-aos="fade-left" data-aos-delay="600">{{ $t('welcome3') }}</p>
+                    <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="600">{{ $t('ctaSubheading') }}</p>
                 </div>
-                <button
-                    @click="sendEmail"
-                    data-aos="fade-left"
-                    data-aos-delay="800"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md shadow-lg my-4 z-10 w-32"
-                >
-                    {{ $t('buttons.contactMe') }}
-                </button>
-                <div class="flex gap-2" data-aos="fade-left" data-aos-delay="1000">
+                <div class="flex gap-6 justify-center">
+                    <a href="#solutions">
+                        <button
+                            @click="sendEmail"
+                            data-aos="fade-right"
+                            data-aos-delay="800"
+                            class="bg-primary border-primary border-2 text-white font-bold py-2 px-4 rounded-sm shadow-lg my-4 z-10 w-40"
+                        >
+                            {{ $t('buttons.solutions') }}
+                        </button>
+                    </a>
+                    <button
+                        @click="sendEmail"
+                        data-aos="fade-right"
+                        data-aos-delay="800"
+                        class="bg-transparent border-primary border-2 text-white font-bold py-2 px-4 rounded-sm shadow-lg my-4 z-10 w-40"
+                    >
+                        {{ $t('buttons.contact') }}
+                    </button>
+                </div>
+                <!-- <div class="flex gap-2 justify-center" data-aos="fade-right" data-aos-delay="1000">
                     <a :href="contactLinks.linkedin" target="_blank">
                         <UiIcon icon="linkedin" class="cursor-pointer" />
                     </a>
                     <a :href="contactLinks.github" target="_blank">
                         <UiIcon icon="github" class="cursor-pointer" />
                     </a>
-                </div>
+                </div> -->
             </div>
-        </UiCardHoverGradient>
+            <div class="img-container">
+                <IllustrationDeveloper class="absolute" data-aos="fade-in" />
+            </div>
+        </div>
     </section>
 </template>
 
@@ -45,7 +51,6 @@ const contactLinks = {
 };
 
 const mail = useFirebaseEmail();
-console.log(mail.sendEmail)
 function sendEmail() {
     mail.sendEmail({
         to: 'carlosvillalobos1047@gmail.com',
@@ -57,22 +62,17 @@ function sendEmail() {
 
 <style lang="scss" scoped>
 .card {
-    background: $card-gradient;
-    height: 580px;
-    @media (min-width: 768px) {
-        height: 550px;
-    }
+    height: 450px;
     @media (min-width: 1280px) {
-        height: 450px;
+        height: 750px;
     }
 
-    img {
-        filter: drop-shadow(0 0 4px white);
-    }
-
-    > div {
-        @media (min-width: 1024px) {
-            margin-left: calc(392px + 1.5rem);
+    .img-container {
+        position: relative;
+        height: 50%;
+        width: 600px;
+        > svg {
+            bottom: -100px;
         }
     }
 }

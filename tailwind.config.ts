@@ -1,16 +1,12 @@
 const theme = {
     extend: {
         colors: {
-            primary: '#001528',
-            'accent-1': '#002B5C',
-            'accent-2': '#FFB100',
-            'accent-3': '#00A74D',
-            'accent-4': '#0077CA',
-            'primary-text': '#FFFFFF',
-            'secondary-text': '#D3D3D3',
+            primary: '#688DC8',
+            'primary-text': '#374151',
+            'secondary-text': 'white',
             'disabled-text': '#A0A0A0',
-            'background-1': '#001528',
-            'background-2': '#303030',
+            'background-1': '#fafafa',
+            'background-2': '#001528',
             'background-3': '#424242',
             'button-1': '#FF4747',
             'button-2': '#FFB100',

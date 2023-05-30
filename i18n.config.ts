@@ -3,19 +3,17 @@ export default defineI18nConfig(() => ({
     locale: 'en',
     messages: {
         en: {
-            welcome1: "Hi, I'm Charlie Villalobos 👋",
-            welcome2: {
-                A: "Looking to build an exceptional website? I'm a  ",
-                B: 'Web Engineer',
-                C: 'specialized in crafting seamless user experiences.',
-            },
-            welcome3: "Let's create something amazing together!",
+            ctaHeading: 'Looking to build an exceptional website?',
+            ctaSubheading:
+                "Hi! I'm Charlie Villalobos 👋. A freelance Web Developer that can help you create an amazing product.",
             buttons: {
-                contactMe: 'Contact Me',
+                solutions: 'View solutions',
+                contact: 'Contact',
             },
             navBar: {
+                services: 'Services',
                 solutions: 'Solutions',
-                consulting: 'Consulting',
+                aboutMe: 'About Me',
                 contact: 'Contact',
             },
             solutions: {

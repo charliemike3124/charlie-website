@@ -1,5 +1,6 @@
 <template>
-    <section class="mt-14 sm:mt-28" id="solutions">
+    <section class="bg-background-2" id="solutions">
+        <img src="@/assets/cta-bottom.png" class="rotate-180" />
         <p class="text-3xl font-bold">Solutions</p>
         <UiDivider class="mt-3 mb-10" />
         <div class="flex gap-4 mb-5">

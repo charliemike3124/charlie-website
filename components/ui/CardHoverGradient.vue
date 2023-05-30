@@ -1,5 +1,5 @@
 <template>
-    <div ref="cardRef" class="card-gradient-on-hover shadow-md rounded-md overflow-hidden">
+    <div ref="cardRef" class="card-gradient-on-hover overflow-hidden">
         <slot></slot>
     </div>
 </template>

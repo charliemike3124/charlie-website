@@ -1,10 +1,13 @@
 <template>
     <div class="mb-48">
-        <meta name="description" content="Charlie Villalobos' personal website. Need a web solution? Contact me." />
-        <SectionNavBar />
-        <SectionLandingPageCta />
-        <SectionSolutions data-aos="fade-in" />
-        <SectionAboutMe data-aos="fade-in" />
+        <div class="text-white px-24 cta relative">
+            <SectionNavBar />
+            <img src="@/assets/cta-bottom.png" class="absolute bottom-0 -mx-24" />
+            <SectionLandingPageCta />
+        </div>
+        <SectionServices />
+        <SectionSolutions />
+        <SectionAboutMe />
     </div>
 </template>
 
@@ -20,3 +23,9 @@ useSeoMeta({
     ogImage: 'https://example.com/image.png',
 });
 </script>
+
+<style>
+.cta {
+    background: radial-gradient(at top, #0d3c68, #001528);
+}
+</style>
