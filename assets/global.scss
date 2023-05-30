@@ -1,2 +1,4 @@
 // Global variables.
-$card-gradient: linear-gradient(to bottom right, #001528, #074184);
+$linear-gradient: linear-gradient(to bottom right, var(--background-3), var(--background-2));
+$radial-gradient: radial-gradient(at top, var(--background-3), var(--background-2));
+$btn-radial-gradient: radial-gradient(at top, var(--primary), var(--background-3));

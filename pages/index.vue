@@ -1,13 +1,18 @@
 <template>
     <div class="mb-48">
-        <div class="text-white px-24 cta relative">
+        <div class="text-white lg:px-24 px-8 cta relative">
             <SectionNavBar />
-            <img src="@/assets/cta-bottom.png" class="absolute bottom-0 -mx-24" />
+            <img
+                src="@/assets/cta-bottom.png"
+                alt="Bottom fade"
+                style="bottom: -1px"
+                class="absolute -mx-8 lg:-mx-24 w-screen"
+            />
             <SectionLandingPageCta />
         </div>
-        <SectionServices />
-        <SectionSolutions />
-        <SectionAboutMe />
+        <LazySectionServices />
+        <LazySectionSolutions />
+        <LazySectionAboutMe />
     </div>
 </template>
 
@@ -24,8 +29,8 @@ useSeoMeta({
 });
 </script>
 
-<style>
+<style lang="scss">
 .cta {
-    background: radial-gradient(at top, #0d3c68, #001528);
+    background: $radial-gradient;
 }
 </style>

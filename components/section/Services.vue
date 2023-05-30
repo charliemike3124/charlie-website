@@ -1,14 +1,26 @@
 <template>
-    <section class="services my-36 px-24 text-primary-text">
-        <div class="flex h-full">
-            <div class="flex flex-col align-middle justify-center w-1/2 pr-36">
-                <div class="delivery-arrow">
-                    <img src="@/assets/delivery-arrow.png" alt="deliver" data-aos="fade-left" data-aos-delay="200" />
+    <section class="services my-36 px-12 lg:px-12 xl:px-32 text-primary-text">
+        <div class="flex flex-col lg:flex-row">
+            <div class="flex flex-col align-middle justify-center lg:w-1/2 lg:pr-36">
+                <div class="delivery-arrow hidden lg:block">
+                    <img
+                        src="@/assets/delivery-arrow.png"
+                        alt="deliver"
+                        data-aos="fade-left"
+                        data-aos-delay="200"
+                        loading="lazy"
+                    />
                 </div>
-                <div class="deliver">
-                    <img src="@/assets/deliver.png" alt="deliver" data-aos="fade-left" data-aos-delay="200" />
+                <div class="deliver hidden lg:block">
+                    <img
+                        src="@/assets/deliver.png"
+                        alt="deliver"
+                        data-aos="fade-left"
+                        data-aos-delay="200"
+                        loading="lazy"
+                    />
                 </div>
-                <div data-aos="fade-right" data-aos-delay="200">
+                <div data-aos="fade-right" data-aos-delay="200" class="text-center lg:text-left mb-20 lg:mb-0">
                     <p class="text-5xl font-bold mb-8">Here's what I can deliver.</p>
                     <p class="text-xl">
                         Leverage the expertise of a seasoned web developer to elevate your online presence and achieve
@@ -16,42 +28,46 @@
                     </p>
                 </div>
             </div>
-            <div class="flex w-1/2 relative">
-                <span class="bg-text">DELIVERY</span>
-                <div class="flex flex-col gap-y-4 self-center" data-aos="fade-right">
-                    <UiCardHoverGradient
-                        class="card bg-white rounded-md shadow-xl w-44 -translate-x-20 -translate-y-10 sm:-rotate-1"
+            <div class="flex flex-col sm:flex-row w-full lg:w-1/2 relative lg:justify-normal justify-center">
+                <span class="bg-text pointer-events-none">DELIVERY</span>
+                <div class="flex flex-col gap-y-8 self-center" data-aos="fade-right">
+                    <div
+                        class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 -translate-y-10 sm:-rotate-1"
                     >
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1">Web Development</p>
+                        <div class="icon-wrapper text-primary"><UiIcon icon="web" /></div>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">Web Development</p>
                         <p class="text-s text-gray-600 sm:rotate-1">
                             Craft exceptional websites with cutting-edge technologies, smooth UX, and responsive
                             designs.
                         </p>
-                    </UiCardHoverGradient>
-                    <UiCardHoverGradient
-                        class="card bg-white rounded-md shadow-xl w-44 -translate-x-20 -translate-y-10 sm:-rotate-1"
+                    </div>
+                    <div
+                        class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 -translate-y-10 sm:-rotate-1"
                     >
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1">API Integration</p>
+                        <div class="icon-wrapper text-accent-1"><UiIcon icon="cog" /></div>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">API Integration</p>
                         <p class="text-s text-gray-600 sm:rotate-1">
                             Seamlessly integrate third-party APIs to enhance functionality and deliver seamless
                             experiences.
                         </p>
-                    </UiCardHoverGradient>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-y-4 pl-4 self-center" data-aos="fade-left">
-                    <UiCardHoverGradient class="card bg-white rounded-md shadow-xl w-44 -translate-x-20 sm:rotate-1">
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1">Consulting</p>
+                <div class="flex flex-col gap-y-8 pl-4 self-center" data-aos="fade-left">
+                    <div class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 sm:rotate-1">
+                        <div class="icon-wrapper text-accent-2"><UiIcon icon="consulting" /></div>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">Consulting</p>
                         <p class="text-s text-gray-600 sm:-rotate-1">
                             Analyze, optimize, and achieve your web goals through project collaboration and expert
                             recommendations.
                         </p>
-                    </UiCardHoverGradient>
-                    <UiCardHoverGradient class="card bg-white rounded-md shadow-xl w-44 -translate-x-20 sm:rotate-1">
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1">Tutoring</p>
+                    </div>
+                    <div class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 sm:rotate-1">
+                        <div class="icon-wrapper text-gray-600"><UiIcon icon="tutoring" /></div>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">Tutoring</p>
                         <p class="text-s text-gray-600 sm:-rotate-1">
                             Gain insights and expand your skills with expert guidance with personalized sessions.
                         </p>
-                    </UiCardHoverGradient>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,13 +76,35 @@
 
 <style lang="scss" scoped>
 .services {
-    height: 600px;
+    min-height: 600px;
     position: relative;
+    > div {
+        min-height: 600px;
+    }
 
     .card {
         padding: 20px;
         height: 200px;
         width: 300px;
+        .icon-wrapper {
+            position: absolute;
+            top: -20px;
+            left: 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--background-1);
+            background: white;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            > svg {
+                width: 33px;
+                height: 33px;
+            }
+        }
     }
 
     .deliver {
@@ -74,15 +112,31 @@
         transform: scaleX(-1);
         transform: scaleX(-1) rotate(7deg);
         position: absolute;
-        top: 30px;
-        left: 120px;
+        top: 0;
+
+        @media (min-width: 1280px) {
+            width: 150px;
+            top: 30px;
+            left: 120px;
+        }
     }
 
     .delivery-arrow {
         position: absolute;
         top: -20px;
         transform: rotate(39deg);
-        left: 340px;
+        left: 300px;
+
+        @media (min-width: 1024px) {
+            width: 120px;
+        }
+        @media (min-width: 1280px) {
+            left: 340px;
+            width: 170px;
+        }
+        @media (min-width: 1536px) {
+            width: 320px;
+        }
     }
 
     .bg-text {

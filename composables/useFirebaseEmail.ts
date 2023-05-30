@@ -1,7 +1,19 @@
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import app from '../firebase.config';
+import { initializeApp } from 'firebase/app';
 
-export function useFirebaseEmail () {
+export function useFirebaseEmail() {
+    const config = useRuntimeConfig();
+    const firebaseConfig = {
+        apiKey: config.public.FIREBASE_API_KEY,
+        authDomain: config.public.FIREBASE_AUTH_DOMAIN,
+        projectId: config.public.FIREBASE_PROJECT_ID,
+        storageBucket: config.public.FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: config.public.FIREBASE_MESSAGING_SENDER_ID,
+        appId: config.public.FIREBASE_APP_ID,
+    };
+
+    const app = initializeApp(firebaseConfig);
+
     const db = getFirestore(app);
     const MAIL_COLLECTION_NAME = 'mail';
 
@@ -23,6 +35,6 @@ export function useFirebaseEmail () {
     }
 
     return {
-      sendEmail
-    }
-};
+        sendEmail,
+    };
+}

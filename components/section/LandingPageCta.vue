@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="card text-secondary-text flex flex-col items-center">
-            <div class="h-full pr-8 py-2 flex flex-col text-center self-center">
+            <div class="h-full py-2 flex flex-col text-center self-center">
                 <div>
                     <p class="mb-4 text-5xl font-bold" data-aos="fade-right" data-aos-delay="200">
                         {{ $t('ctaHeading') }}
@@ -29,10 +29,10 @@
                     </button>
                 </div>
                 <!-- <div class="flex gap-2 justify-center" data-aos="fade-right" data-aos-delay="1000">
-                    <a :href="contactLinks.linkedin" target="_blank">
+                    <a :href="contactLinks.linkedin" target="_blank" alt="linkedin">
                         <UiIcon icon="linkedin" class="cursor-pointer" />
                     </a>
-                    <a :href="contactLinks.github" target="_blank">
+                    <a :href="contactLinks.github" target="_blank" alt="github">
                         <UiIcon icon="github" class="cursor-pointer" />
                     </a>
                 </div> -->
@@ -62,7 +62,7 @@ function sendEmail() {
 
 <style lang="scss" scoped>
 .card {
-    height: 450px;
+    height: 750px;
     @media (min-width: 1280px) {
         height: 750px;
     }
@@ -70,7 +70,13 @@ function sendEmail() {
     .img-container {
         position: relative;
         height: 50%;
-        width: 600px;
+        width: 400px;
+        @media (min-width: 768px) {
+            width: 500px;
+        }
+        @media (min-width: 1280px) {
+            width: 600px;
+        }
         > svg {
             bottom: -100px;
         }

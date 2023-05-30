@@ -5,7 +5,7 @@ export default defineI18nConfig(() => ({
         en: {
             ctaHeading: 'Looking to build an exceptional website?',
             ctaSubheading:
-                "Hi! I'm Charlie Villalobos 👋. A freelance Web Developer that can help you create an amazing product.",
+                "Hi! I'm Charlie Villalobos 👋, a freelance Web Developer dedicated to crafting exceptional digital solutions for your unique needs.",
             buttons: {
                 solutions: 'View solutions',
                 contact: 'Contact',

@@ -1,47 +1,30 @@
 <template>
-    <section class="bg-background-2" id="solutions">
-        <img src="@/assets/cta-bottom.png" class="rotate-180" />
-        <p class="text-3xl font-bold">Solutions</p>
-        <UiDivider class="mt-3 mb-10" />
-        <div class="flex gap-4 mb-5">
-            <div class="cursor-pointer" @click="currentFilter = 'All'">
-                {{ $t('solutions.all') }}<UiHoverUnderline :show="currentFilter === 'All'" />
-            </div>
-            <div class="cursor-pointer" @click="currentFilter = 'Web-Apps'">
-                {{ $t('solutions.webApps') }}<UiHoverUnderline :show="currentFilter === 'Web-Apps'" />
-            </div>
-            <div class="cursor-pointer" @click="currentFilter = 'E-commerce'">
-                {{ $t('solutions.ecommerce') }}<UiHoverUnderline :show="currentFilter === 'E-commerce'" />
-            </div>
-            <div class="cursor-pointer" @click="currentFilter = 'Blogs'">
-                {{ $t('solutions.blogs') }}<UiHoverUnderline :show="currentFilter === 'Blogs'" />
-            </div>
+    <section class="bg-background-1 md:px-12 2xl:px-64" id="solutions">
+        <div class="text-center flex flex-col gap-4 items-center">
+            <p class="text-6xl font-bold">My Latest Works</p>
+            <UiDivider />
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
-            <transition-group name="card" mode="out-in">
-                <UiCardHoverGradient v-for="sol in solutions" :key="sol.title" class="card border-2">
-                    <div class="flex-col h-full px-3">
-                        <div class="py-2">
-                            <p class="text-xl font-bold">{{ sol.title }}</p>
-                            <UiDivider class="my-2" />
-                        </div>
-                        <div class="rounded-md overflow-hidden hover:scale-105 duration-500 flex justify-center">
-                            <a :href="sol.href" target="_blank"
-                                ><img :src="sol.img" :alt="`${sol.title} image`" class="max-h-48 cursor-pointer"
-                            /></a>
-                        </div>
-                        <div class="flex-grow pt-4">
-                            <p>{{ sol.description }}</p>
-                        </div>
-                        <div class="pt-4 pb-2 flex m-auto w-full flex-grow">
-                            <a :href="sol.href" target="_blank" class="flex gap-1 underline">
-                                Visit
-                                <UiIcon icon="openInNew" class="w-3 underline" />
-                            </a>
-                        </div>
+        <div class="flex flex-wrap gap-y-12 gap-x-24 justify-center items-center mt-16 w-10/12 m-auto">
+            <div class="card rounded-md shadow-xl" v-for="(sol, i) in solutions" :key="i">
+                <div class="h-3/6 overflow-hidden border-8 rounded-xl border-white">
+                    <img :src="sol.img" alt="Solution Preview" class="w-full" loading="lazy" />
+                </div>
+                <div class="h-3/6 px-2 lg:px-12 py-4 text-center flex flex-col items-center">
+                    <div>
+                        <p class="text-2xl lg:text-4xl font-bold mb-4">{{ sol.title }}</p>
+                        <p>{{ sol.description }}</p>
                     </div>
-                </UiCardHoverGradient>
-            </transition-group>
+                    <div class="flex-grow flex items-end pb-10">
+                        <a :href="sol.href">
+                            <button
+                                class="rounded-3xl w-full py-4 px-8 flex self-end button-bg text-secondary-text font-bold"
+                            >
+                                Visit Website
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -56,7 +39,7 @@ import duranyalvarez from '@/assets/duranyalvarez.jpg';
 
 const unfilteredSolutions = [
     {
-        title: 'Peoplefinders',
+        title: 'PeopleFinders.com',
         href: 'https://www.peoplefinders.com/',
         img: peoplefinders,
         description: 'A website used to find any person in the United States.',
@@ -106,21 +89,18 @@ const solutions = computed(() => {
 
 <style lang="scss" scoped>
 .card {
-    background: $card-gradient;
-    min-height: 420px;
+    height: 500px;
+    width: 340px;
+    background: white;
+    overflow: hidden;
 
-    img {
-        width: 100%;
-        height: 190px;
+    @media (min-width: 1024px) {
+        height: 600px;
+        width: 380px;
     }
-}
-.card-enter-active,
-.card-leave-active {
-    transition: opacity 0.3s ease-in;
-}
 
-.card-enter-from,
-.card-leave-to {
-    opacity: 0;
+    .button-bg {
+        background: $btn-radial-gradient;
+    }
 }
 </style>

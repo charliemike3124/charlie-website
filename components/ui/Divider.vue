@@ -1,3 +1,3 @@
 <template>
-    <div class="border-b-2 border-white opacity-5"></div>
+    <div class="h-1 bg-primary w-12 rounded-lg"></div>
 </template>
