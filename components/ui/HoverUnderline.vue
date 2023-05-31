@@ -5,6 +5,10 @@
 <script setup>
 const props = defineProps({
     show: Boolean,
+    color: {
+        type: String,
+        default: 'white',
+    },
 });
 
 const borderRef = ref(null);
@@ -43,6 +47,6 @@ watch(
 <style lang="scss" scoped>
 .show {
     width: 100%;
-    border: solid 1px white;
+    border: solid 1px v-bind('props.color');
 }
 </style>

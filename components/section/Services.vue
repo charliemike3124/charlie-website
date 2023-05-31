@@ -1,5 +1,6 @@
 <template>
-    <section class="services my-36 px-12 lg:px-12 xl:px-32 text-primary-text">
+    <section class="services relative mt-64 mb-36 px-12 lg:px-32 2xl:px-64 text-primary-text" id="services">
+        <span class="bg-text pointer-events-none">DELIVERY</span>
         <div class="flex flex-col lg:flex-row">
             <div class="flex flex-col align-middle justify-center lg:w-1/2 lg:pr-36">
                 <div class="delivery-arrow hidden lg:block">
@@ -28,8 +29,7 @@
                     </p>
                 </div>
             </div>
-            <div class="flex flex-col sm:flex-row w-full lg:w-1/2 relative lg:justify-normal justify-center">
-                <span class="bg-text pointer-events-none">DELIVERY</span>
+            <div class="flex flex-col sm:flex-row w-full lg:w-1/2 lg:justify-normal justify-center">
                 <div class="flex flex-col gap-y-8 self-center" data-aos="fade-right">
                     <div
                         class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 -translate-y-10 sm:-rotate-1"
@@ -114,10 +114,10 @@
         position: absolute;
         top: 0;
 
-        @media (min-width: 1280px) {
+        @media (min-width: 1536px) {
             width: 150px;
             top: 30px;
-            left: 120px;
+            left: 220px;
         }
     }
 
@@ -128,14 +128,16 @@
         left: 300px;
 
         @media (min-width: 1024px) {
-            width: 120px;
+            width: 140px;
         }
         @media (min-width: 1280px) {
-            left: 340px;
+            top: -50px;
+            left: 380px;
             width: 170px;
         }
         @media (min-width: 1536px) {
-            width: 320px;
+            left: 400px;
+            width: 340px;
         }
     }
 
@@ -143,8 +145,9 @@
         font-size: 400px;
         position: absolute;
         opacity: 0.02;
-        bottom: -160px;
-        left: -554px;
+        bottom: 20%;
+        left: -300px;
+        filter: blur(5px);
     }
 }
 </style>

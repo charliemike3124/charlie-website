@@ -1,84 +1,79 @@
 <template>
-    <section class="bg-background-1 md:px-12 2xl:px-64" id="solutions">
-        <div class="text-center flex flex-col gap-4 items-center">
+    <section class="bg-background-1 md:px-12 2xl:w-10/12 m-auto relative" id="solutions">
+        <span class="bg-text pointer-events-none">WORKS</span>
+        <div class="text-center flex flex-col gap-4 items-center" data-aos="fade-right">
             <p class="text-6xl font-bold">My Latest Works</p>
             <UiDivider />
         </div>
-        <div class="flex flex-wrap gap-y-12 gap-x-24 justify-center items-center mt-16 w-10/12 m-auto">
-            <div class="card rounded-md shadow-xl" v-for="(sol, i) in solutions" :key="i">
-                <div class="h-3/6 overflow-hidden border-8 rounded-xl border-white">
-                    <img :src="sol.img" alt="Solution Preview" class="w-full" loading="lazy" />
-                </div>
-                <div class="h-3/6 px-2 lg:px-12 py-4 text-center flex flex-col items-center">
-                    <div>
-                        <p class="text-2xl lg:text-4xl font-bold mb-4">{{ sol.title }}</p>
-                        <p>{{ sol.description }}</p>
-                    </div>
-                    <div class="flex-grow flex items-end pb-10">
-                        <a :href="sol.href">
-                            <button
-                                class="rounded-3xl w-full py-4 px-8 flex self-end button-bg text-secondary-text font-bold"
-                            >
-                                Visit Website
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="mt-16 flex justify-center" data-aos="fade-right">
+            <p class="text-xl text-gray-600 flex gap-3">
+                <span @click="currentFilter = 'All'" class="cursor-pointer"
+                    >All<UiHoverUnderline color="var(--primary)" />
+                </span>
+                <span @click="currentFilter = 'Web-Apps'" class="cursor-pointer"
+                    >Web-Apps <UiHoverUnderline color="var(--primary)"
+                /></span>
+            </p>
+        </div>
+        <div
+            class="flex flex-wrap gap-y-12 gap-x-12 justify-center items-center mt-8 w-10/12 m-auto duration-200"
+            data-aos="fade-in"
+        >
+            <UiCardSolution v-bind="sol" v-for="(sol, i) in solutions" :key="i" />
         </div>
     </section>
 </template>
 
 <script setup>
-import peoplefinders from '@/assets/peoplefinders.jpg';
+import peoplefinders from '@/assets/peoplefinders-thumb.png';
 import ntune from '@/assets/ntune.png';
-import mibanco from '@/assets/mibanco.webp';
-import fundaciondelamujer from '@/assets/fundaciondelamujer.jpg';
-import pcfactory from '@/assets/pcfactory.jpg';
-import duranyalvarez from '@/assets/duranyalvarez.jpg';
+import mibanco from '@/assets/mibanco-thumb.png';
+import fundaciondelamujer from '@/assets/fundaciondelamujer-thumb.png';
+import pcfactory from '@/assets/pcfactory-thumb.png';
+import duranyalvarez from '@/assets/duranyalvarez-thumb.png';
 
 const unfilteredSolutions = [
     {
-        title: 'PeopleFinders.com',
+        title: 'A website used to find any person in the United States.',
         href: 'https://www.peoplefinders.com/',
         img: peoplefinders,
-        description: 'A website used to find any person in the United States.',
+        description: 'Team Project, Web App',
         type: 'Web-Apps',
     },
     {
-        title: 'Ntune',
+        title: 'Real-time collaboration application similar to Teams.',
         href: 'https://www.relativity.com/data-solutions/customizations/app-hub/ntune/',
         img: ntune,
-        description: 'Real-time collaboration application similar to Teams.',
+        description: 'Team Project, Real-Time, Web App',
         type: 'Web-Apps',
     },
     {
-        title: 'MiBanco',
-        href: 'https://www.mibanco.com.co/#!inicio',
-        img: mibanco,
-        description: 'Easy to use and access bank for less-priviledged people.',
-        type: 'Web-Apps',
-    },
-    {
-        title: 'Fundación de la mujer',
-        href: 'https://portales.fundaciondelamujer.com/',
-        img: fundaciondelamujer,
-        description: 'Colombian bank focused on improving womens quality of life.',
-        type: 'Web-Apps',
-    },
-    {
-        title: 'PcFactory',
-        href: 'https://www.pcfactory.cl/ ',
-        img: pcfactory,
-        description: 'E-commerce website centered around techonology products.',
-        type: 'E-commerce',
-    },
-    {
-        title: 'Duran y Álvarez',
+        title: 'Online portfolio and blog website.',
         href: 'https://www.duranyalvarez.com/ ',
         img: duranyalvarez,
-        description: 'Online portfolio and blog website.',
+        description: 'Solo Project, Portfolio, Blog',
         type: 'Blogs',
+    },
+    {
+        title: 'Easy to use and access bank for less-priviledged people.',
+        href: 'https://www.mibanco.com.co/#!inicio',
+        img: mibanco,
+        description: 'Team Project, Dashboard, UI',
+        type: 'Web-Apps',
+    },
+    {
+        title: 'Colombian bank focused on improving womens quality of life.',
+        href: 'https://portales.fundaciondelamujer.com/',
+        img: fundaciondelamujer,
+        description: 'Team Project, UI',
+        type: 'Web-Apps',
+    },
+    {
+        title: 'E-commerce website centered around techonology products.',
+        href: 'https://www.pcfactory.cl/ ',
+        img: pcfactory,
+        description: 'Team Project, E-commerce, UI',
+        type: 'E-commerce',
     },
 ];
 const currentFilter = ref('All');
@@ -88,19 +83,12 @@ const solutions = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.card {
-    height: 500px;
-    width: 340px;
-    background: white;
-    overflow: hidden;
-
-    @media (min-width: 1024px) {
-        height: 600px;
-        width: 380px;
-    }
-
-    .button-bg {
-        background: $btn-radial-gradient;
-    }
+.bg-text {
+    font-size: 400px;
+    position: absolute;
+    opacity: 0.02;
+    bottom: 20%;
+    left: -100px;
+    filter: blur(5px);
 }
 </style>

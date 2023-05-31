@@ -3,9 +3,13 @@ export default defineI18nConfig(() => ({
     locale: 'en',
     messages: {
         en: {
-            ctaHeading: 'Looking to build an exceptional website?',
+            ctaHeading: {
+                1: 'Looking to build an ',
+                2: 'exceptional ',
+                3: 'website',
+            },
             ctaSubheading:
-                "Hi! I'm Charlie Villalobos 👋, a freelance Web Developer dedicated to crafting exceptional digital solutions for your unique needs.",
+                "Hi 👋 I'm Charlie Villalobos, a freelance Web Developer dedicated to crafting exceptional digital solutions for your unique needs.",
             buttons: {
                 solutions: 'View solutions',
                 contact: 'Contact',

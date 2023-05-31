@@ -4,23 +4,22 @@
             <div class="h-full py-2 flex flex-col text-center self-center">
                 <div>
                     <p class="mb-4 text-5xl font-bold" data-aos="fade-right" data-aos-delay="200">
-                        {{ $t('ctaHeading') }}
+                        {{ $t('ctaHeading.1') }} <span class="heading-cta">{{ $t('ctaHeading.2') }}</span
+                        >{{ $t('ctaHeading.3') }}
                     </p>
                     <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="600">{{ $t('ctaSubheading') }}</p>
                 </div>
                 <div class="flex gap-6 justify-center">
                     <a href="#solutions">
                         <button
-                            @click="sendEmail"
                             data-aos="fade-right"
                             data-aos-delay="800"
-                            class="bg-primary border-primary border-2 text-white font-bold py-2 px-4 rounded-sm shadow-lg my-4 z-10 w-40"
+                            class="bg-primary text-white font-bold py-2 px-4 rounded-sm shadow-lg my-4 z-10 w-40"
                         >
                             {{ $t('buttons.solutions') }}
                         </button>
                     </a>
                     <button
-                        @click="sendEmail"
                         data-aos="fade-right"
                         data-aos-delay="800"
                         class="bg-transparent border-primary border-2 text-white font-bold py-2 px-4 rounded-sm shadow-lg my-4 z-10 w-40"
@@ -65,6 +64,10 @@ function sendEmail() {
     height: 750px;
     @media (min-width: 1280px) {
         height: 750px;
+    }
+
+    .heading-cta {
+        filter: drop-shadow(0px 0px 3px white);
     }
 
     .img-container {
