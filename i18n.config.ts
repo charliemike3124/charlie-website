@@ -12,7 +12,7 @@ export default defineI18nConfig(() => ({
                 "Hi 👋 I'm Charlie Villalobos, a freelance Web Developer dedicated to crafting exceptional digital solutions for your unique needs.",
             buttons: {
                 solutions: "Explore",
-                contact: "Contact Me!",
+                contact: "Contact me!",
             },
             navBar: {
                 services: "Services",
@@ -60,6 +60,12 @@ export default defineI18nConfig(() => ({
                 vass: "Provide consultancy services for diverse project types and clients.",
                 codifico: "Led the development and maintenance of multiple web applications.",
                 puertobahia: "Create and maintain functionalities for the company's web portal.",
+            },
+            footer: {
+                interested: "Interested in working with me?",
+                linkedin: "My Linkedin",
+                github: "My Github",
+                whatsapp: "Text me",
             },
         },
         es: {
@@ -122,6 +128,12 @@ export default defineI18nConfig(() => ({
                 vass: "Ofrezco servicios de consultoría para diferentes tipos de proyectos y clientes.",
                 codifico: "Lideré el desarrollo y mantenimiento de múltiples aplicaciones web.",
                 puertobahia: "Creé y mantuve funcionalidades para el portal web de la empresa.",
+            },
+            footer: {
+                interested: "¿Interesado en trabajar conmigo?",
+                linkedin: "Mi Linkedin",
+                github: "Mi Github",
+                whatsapp: "Escríbeme",
             },
         },
     },
