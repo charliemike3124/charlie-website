@@ -22,7 +22,7 @@
                         <div
                             class="p-4 shadow-md bg-white rounded-xl flex justify-center items-center duration-200 hover:-translate-y-1"
                         >
-                            <img :src="tech.import" :alt="tech.name" />
+                            <img :src="tech.import" :alt="tech.name" loading="lazy" />
                         </div>
                     </div>
                 </div>

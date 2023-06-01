@@ -1,7 +1,18 @@
 <template>
     <div class="footer text-white bg-radial-gradient-2 relative overflow-hidden">
-        <img src="@/assets/bg.png" alt="Side fade" class="absolute top-0 left-0 opacity-5 w-full pointer-events-none" />
-        <img src="@/assets/cta-bottom.png" alt="Bottom fade" class="absolute w-screen rotate-180" style="top: -1px" />
+        <img
+            src="@/assets/bg.png"
+            alt="Side fade"
+            class="absolute top-0 left-0 opacity-5 w-full pointer-events-none"
+            loading="lazy"
+        />
+        <img
+            src="@/assets/cta-bottom.png"
+            alt="Bottom fade"
+            class="absolute w-screen rotate-180"
+            style="top: -1px"
+            loading="lazy"
+        />
         <div class="flex flex-col gap-6 text-center justify-center items-center h-full">
             <p class="text-6xl font-bold" data-aos="fade-right">Interested in collaborating with me?</p>
             <UiButton data-aos="fade-right" data-aos-delay="200">Contact Me!</UiButton>
