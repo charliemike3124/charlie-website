@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <div class="card text-secondary-text flex flex-col items-center">
+    <NuxtLayout name="section">
+        <div class="landing-page-cta text-secondary-text flex flex-col items-center">
             <div class="h-full py-2 flex flex-col text-center self-center">
                 <div>
                     <p class="mb-4 text-5xl font-bold" data-aos="fade-right" data-aos-delay="200">
@@ -11,44 +11,23 @@
                 </div>
                 <div class="flex gap-6 justify-center">
                     <a href="#solutions">
-                        <button
-                            data-aos="fade-right"
-                            data-aos-delay="800"
-                            class="bg-primary text-white font-bold py-2 px-4 rounded-sm shadow-lg my-4 z-10 w-40"
-                        >
+                        <UiButton data-aos="fade-right" data-aos-delay="800">
                             {{ $t('buttons.solutions') }}
-                        </button>
+                        </UiButton>
                     </a>
-                    <button
-                        data-aos="fade-right"
-                        data-aos-delay="800"
-                        class="bg-transparent border-primary border-2 text-white font-bold py-2 px-4 rounded-sm shadow-lg my-4 z-10 w-40"
-                    >
+                    <UiButton data-aos="fade-right" data-aos-delay="800" outlined>
                         {{ $t('buttons.contact') }}
-                    </button>
+                    </UiButton>
                 </div>
-                <!-- <div class="flex gap-2 justify-center" data-aos="fade-right" data-aos-delay="1000">
-                    <a :href="contactLinks.linkedin" target="_blank" alt="linkedin">
-                        <UiIcon icon="linkedin" class="cursor-pointer" />
-                    </a>
-                    <a :href="contactLinks.github" target="_blank" alt="github">
-                        <UiIcon icon="github" class="cursor-pointer" />
-                    </a>
-                </div> -->
             </div>
             <div class="img-container">
                 <IllustrationDeveloper class="absolute" data-aos="fade-in" />
             </div>
         </div>
-    </section>
+    </NuxtLayout>
 </template>
 
 <script setup>
-const contactLinks = {
-    linkedin: 'https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US',
-    github: 'https://github.com/charliemike3124',
-};
-
 const mail = useFirebaseEmail();
 function sendEmail() {
     mail.sendEmail({
@@ -60,11 +39,8 @@ function sendEmail() {
 </script>
 
 <style lang="scss" scoped>
-.card {
+.landing-page-cta {
     height: 750px;
-    @media (min-width: 1280px) {
-        height: 750px;
-    }
 
     .heading-cta {
         filter: drop-shadow(0px 0px 3px white);

@@ -1,18 +1,19 @@
 <template>
-    <div class="mb-48">
-        <div class="text-white lg:px-24 px-8 cta relative">
+    <div>
+        <div class="text-white bg-radial-gradient relative">
             <SectionNavBar />
             <img
-                src="@/assets/cta-bottom.png"
-                alt="Bottom fade"
-                style="bottom: -1px"
-                class="absolute -mx-8 lg:-mx-24 w-screen"
+                src="@/assets/bg.png"
+                alt="Side fade"
+                class="absolute top-0 left-0 opacity-5 w-full pointer-events-none"
             />
+            <img src="@/assets/cta-bottom.png" alt="Bottom fade" class="absolute w-screen" style="bottom: -1px" />
             <SectionLandingPageCta />
         </div>
         <LazySectionServices />
         <LazySectionSolutions />
         <LazySectionAboutMe />
+        <LazySectionFooter />
     </div>
 </template>
 
@@ -28,9 +29,3 @@ useSeoMeta({
     ogImage: 'https://example.com/image.png',
 });
 </script>
-
-<style lang="scss">
-.cta {
-    background: $radial-gradient;
-}
-</style>

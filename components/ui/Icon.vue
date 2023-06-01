@@ -3,27 +3,38 @@
 </template>
 
 <script setup lang="ts">
-import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiLinkedin, mdiGithub, mdiOpenInNew, mdiWeb, mdiCogOutline, mdiAccountTie, mdiSchoolOutline } from '@mdi/js';
+import SvgIcon from "@jamescoyle/vue-icon";
+import {
+    mdiLinkedin,
+    mdiGithub,
+    mdiOpenInNew,
+    mdiWeb,
+    mdiCogOutline,
+    mdiAccountTie,
+    mdiSchoolOutline,
+    mdiWhatsapp,
+} from "@mdi/js";
 
 const props = defineProps<{ icon: String }>();
 
 const path = computed(() => {
     switch (props.icon) {
-        case 'linkedin':
+        case "linkedin":
             return mdiLinkedin;
-        case 'github':
+        case "github":
             return mdiGithub;
-        case 'openInNew':
+        case "openInNew":
             return mdiOpenInNew;
-        case 'web':
+        case "web":
             return mdiWeb;
-        case 'cog':
+        case "cog":
             return mdiCogOutline;
-        case 'consulting':
+        case "consulting":
             return mdiAccountTie;
-        case 'tutoring':
+        case "tutoring":
             return mdiSchoolOutline;
+        case "whatsapp":
+            return mdiWhatsapp;
     }
 });
 </script>

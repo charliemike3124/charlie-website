@@ -1,5 +1,5 @@
 <template>
-    <section class="services relative mt-64 mb-36 px-12 lg:px-32 2xl:px-64 text-primary-text" id="services">
+    <NuxtLayout name="section" class="services relative mt-64 text-primary-text" id="services">
         <span class="bg-text pointer-events-none">DELIVERY</span>
         <div class="flex flex-col lg:flex-row">
             <div class="flex flex-col align-middle justify-center lg:w-1/2 lg:pr-36">
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </NuxtLayout>
 </template>
 
 <style lang="scss" scoped>

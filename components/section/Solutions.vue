@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-background-1 md:px-12 2xl:w-10/12 m-auto relative" id="solutions">
+    <NuxtLayout name="section" class="bg-background-1 relative" id="solutions">
         <span class="bg-text pointer-events-none">WORKS</span>
         <div class="text-center flex flex-col gap-4 items-center" data-aos="fade-right">
             <p class="text-6xl font-bold">My Latest Works</p>
@@ -15,13 +15,10 @@
                 /></span>
             </p>
         </div>
-        <div
-            class="flex flex-wrap gap-y-12 gap-x-12 justify-center items-center mt-8 w-10/12 m-auto duration-200"
-            data-aos="fade-in"
-        >
+        <div class="flex flex-wrap gap-y-12 gap-x-12 justify-center items-center mt-8 duration-200" data-aos="fade-in">
             <UiCardSolution v-bind="sol" v-for="(sol, i) in solutions" :key="i" />
         </div>
-    </section>
+    </NuxtLayout>
 </template>
 
 <script setup>
@@ -34,7 +31,7 @@ import duranyalvarez from '@/assets/duranyalvarez-thumb.png';
 
 const unfilteredSolutions = [
     {
-        title: 'A website used to find any person in the United States.',
+        title: 'Person Finder: Locate Anyone in USA',
         href: 'https://www.peoplefinders.com/',
         img: peoplefinders,
         description: 'Team Project, Web App',
@@ -44,7 +41,7 @@ const unfilteredSolutions = [
         title: 'Real-time collaboration application similar to Teams.',
         href: 'https://www.relativity.com/data-solutions/customizations/app-hub/ntune/',
         img: ntune,
-        description: 'Team Project, Real-Time, Web App',
+        description: 'Team Project, Real-Time Chat, Web App',
         type: 'Web-Apps',
     },
     {
@@ -55,14 +52,14 @@ const unfilteredSolutions = [
         type: 'Blogs',
     },
     {
-        title: 'Easy to use and access bank for less-priviledged people.',
+        title: 'Accessible banking solution for all.',
         href: 'https://www.mibanco.com.co/#!inicio',
         img: mibanco,
         description: 'Team Project, Dashboard, UI',
         type: 'Web-Apps',
     },
     {
-        title: 'Colombian bank focused on improving womens quality of life.',
+        title: 'Colombian bank driving positive change and empowering women.',
         href: 'https://portales.fundaciondelamujer.com/',
         img: fundaciondelamujer,
         description: 'Team Project, UI',

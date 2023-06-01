@@ -1,5 +1,5 @@
 <template>
-    <section data-aos="fade-in">
+    <NuxtLayout name="section" data-aos="fade-in" class="mb-0">
         <nav class="h-24 flex justify-between items-center">
             <div>
                 <a class="font-extrabold italic cursor-pointer text-lg" href="#"> Charlie Villalobos. </a>
@@ -14,11 +14,9 @@
                 </div>
             </div>
 
-            <div class="flex">
-                <LangSwitcher />
-            </div>
+            <LangSwitcher />
         </nav>
-    </section>
+    </NuxtLayout>
 </template>
 
 <script setup>

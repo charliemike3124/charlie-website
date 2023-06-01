@@ -1,6 +1,6 @@
 <template>
     <svg
-        class="animated"
+        class="animated filter-dev"
         id="freepik_stories-cross-platform-software"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 500 500"
@@ -2673,6 +2673,10 @@
 </template>
 
 <style>
+.filter-dev {
+    filter: hue-rotate(330deg) saturate(1.2);
+}
+
 svg#freepik_stories-cross-platform-software:not(.animated) .animable {
     opacity: 0;
 }

@@ -30,7 +30,10 @@ const props = defineProps({
     description: String,
     href: String,
 });
-const randomHue = `${Math.floor(Math.random() * 361)}deg`;
+const min = -20;
+const max = 20;
+const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
+const randomHue = `${randomValue}deg`;
 </script>
 
 <style lang="scss" scoped>

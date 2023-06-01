@@ -1,4 +1,13 @@
 // Global variables.
 $linear-gradient: linear-gradient(to bottom right, var(--background-3), var(--background-2));
 $radial-gradient: radial-gradient(at top, var(--background-3), var(--background-2));
+$radial-gradient-2: radial-gradient(at top, #02008d, var(--background-2));
 $btn-radial-gradient: radial-gradient(at top, var(--primary), var(--background-3));
+
+// Global classes.
+.bg-radial-gradient {
+    background: $radial-gradient;
+}
+.bg-radial-gradient-2 {
+    background: $radial-gradient-2;
+}

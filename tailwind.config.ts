@@ -1,15 +1,15 @@
 const theme = {
     extend: {
         colors: {
-            primary: '#688DC8',
+            primary: '#66c5ad',
             'primary-text': '#374151',
             'secondary-text': 'white',
             'disabled-text': '#A0A0A0',
             'background-1': '#fafafa',
-            'background-2': '#001528',
-            'background-3': '#0d3c68',
-            'accent-1': '#8cc48c',
-            'accent-2': '#fbc83a',
+            'background-2': '#66c5ad',
+            'background-3': '#005f8d',
+            'accent-1': '#f8accc',
+            'accent-2': '#c46655',
         },
     },
     screens: {
