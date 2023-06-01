@@ -4,7 +4,9 @@
         <img src="@/assets/cta-bottom.png" alt="Bottom fade" class="absolute w-screen rotate-180" style="top: -1px" />
         <div class="flex flex-col gap-6 text-center justify-center items-center h-full px-12">
             <p class="text-4xl lg:text-6xl font-bold" data-aos="fade-right">{{ $t("footer.interested") }}</p>
-            <UiButton data-aos="fade-right" data-aos-delay="200">{{ $t("buttons.contact") }}</UiButton>
+            <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank">
+                <UiButton data-aos="fade-right" data-aos-delay="200">{{ $t("buttons.contact") }}</UiButton>
+            </a>
             <div
                 class="flex flex-col gap-2 justify-center items-center mt-12"
                 data-aos="fade-right"

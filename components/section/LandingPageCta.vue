@@ -15,9 +15,11 @@
                             {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="w-5" />
                         </UiButton>
                     </a>
-                    <UiButton data-aos="fade-right" data-aos-delay="800" outlined>
-                        {{ $t("buttons.contact") }}
-                    </UiButton>
+                    <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank">
+                        <UiButton data-aos="fade-right" data-aos-delay="800" outlined>
+                            {{ $t("buttons.contact") }}
+                        </UiButton>
+                    </a>
                 </div>
             </div>
             <div class="img-container">
