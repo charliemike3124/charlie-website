@@ -1,5 +1,5 @@
 <template>
-    <SvgIcon type="mdi" :path="path" />
+    <SvgIcon type="mdi" :path="path" class="hover:-translate-y-2 hover:text-primary ease-in duration-200" />
 </template>
 
 <script setup lang="ts">

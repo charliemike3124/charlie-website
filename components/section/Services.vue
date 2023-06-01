@@ -26,7 +26,7 @@
                     <p class="text-xl">
                         {{ $t("services.subtitle") }}
                     </p>
-                    <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank">
+                    <a href="https://wa.me/573174027001" target="_blank">
                         <UiButton class="translate-y-8" primary>{{ $t("buttons.contact") }}</UiButton>
                     </a>
                 </div>

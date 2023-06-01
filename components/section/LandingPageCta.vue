@@ -3,20 +3,35 @@
         <div class="landing-page-cta text-secondary-text flex flex-col items-center">
             <div class="h-full py-2 flex flex-col text-center self-center">
                 <div>
-                    <p class="mb-4 text-5xl font-bold" data-aos="fade-right" data-aos-delay="200">
+                    <p class="mb-4 text-5xl font-bold" data-aos="fade-right">
                         {{ $t("ctaHeading.1") }} <span class="heading-cta">{{ $t("ctaHeading.2") }}</span
                         >{{ $t("ctaHeading.3") }}
                     </p>
-                    <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="600">{{ $t("ctaSubheading") }}</p>
+                    <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="200">{{ $t("ctaSubheading") }}</p>
+                </div>
+                <div class="flex justify-center gap-4" data-aos="fade-right" data-aos-delay="400">
+                    <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank" alt="linkedin">
+                        <p class="flex gap-2 underline">
+                            <UiIcon icon="linkedin" class="cursor-pointer" /></p
+                    ></a>
+                    <a href="https://github.com/charliemike3124" target="_blank" alt="github">
+                        <p class="flex gap-2 underline">
+                            <UiIcon icon="github" class="cursor-pointer" /></p
+                    ></a>
+                    <a href="https://wa.me/573174027001" target="_blank">
+                        <p class="flex gap-2 underline">
+                            <UiIcon icon="whatsapp" class="cursor-pointer" />
+                        </p>
+                    </a>
                 </div>
                 <div class="flex gap-6 justify-center">
                     <a href="#solutions">
-                        <UiButton data-aos="fade-right" data-aos-delay="800">
+                        <UiButton data-aos="fade-right" data-aos-delay="600">
                             {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="w-5" />
                         </UiButton>
                     </a>
-                    <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank">
-                        <UiButton data-aos="fade-right" data-aos-delay="800" outlined>
+                    <a href="https://wa.me/573174027001" target="_blank">
+                        <UiButton data-aos="fade-right" data-aos-delay="600" outlined>
                             {{ $t("buttons.contact") }}
                         </UiButton>
                     </a>
