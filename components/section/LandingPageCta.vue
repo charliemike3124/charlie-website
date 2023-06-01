@@ -4,19 +4,19 @@
             <div class="h-full py-2 flex flex-col text-center self-center">
                 <div>
                     <p class="mb-4 text-5xl font-bold" data-aos="fade-right" data-aos-delay="200">
-                        {{ $t('ctaHeading.1') }} <span class="heading-cta">{{ $t('ctaHeading.2') }}</span
-                        >{{ $t('ctaHeading.3') }}
+                        {{ $t("ctaHeading.1") }} <span class="heading-cta">{{ $t("ctaHeading.2") }}</span
+                        >{{ $t("ctaHeading.3") }}
                     </p>
-                    <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="600">{{ $t('ctaSubheading') }}</p>
+                    <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="600">{{ $t("ctaSubheading") }}</p>
                 </div>
                 <div class="flex gap-6 justify-center">
                     <a href="#solutions">
                         <UiButton data-aos="fade-right" data-aos-delay="800">
-                            {{ $t('buttons.solutions') }}
+                            {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="w-5" />
                         </UiButton>
                     </a>
                     <UiButton data-aos="fade-right" data-aos-delay="800" outlined>
-                        {{ $t('buttons.contact') }}
+                        {{ $t("buttons.contact") }}
                     </UiButton>
                 </div>
             </div>
@@ -31,9 +31,9 @@
 const mail = useFirebaseEmail();
 function sendEmail() {
     mail.sendEmail({
-        to: 'carlosvillalobos1047@gmail.com',
-        subject: 'test',
-        html: 'holardo',
+        to: "carlosvillalobos1047@gmail.com",
+        subject: "test",
+        html: "holardo",
     });
 }
 </script>

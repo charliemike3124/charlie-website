@@ -1,5 +1,5 @@
 <template>
-    <NuxtLayout name="section" data-aos="fade-in" class="mb-0">
+    <section data-aos="fade-in" class="mb-0 mx-auto px-12 lg:px-32 2xl:px-64">
         <nav class="h-24 flex justify-between items-center">
             <div>
                 <a class="font-extrabold italic cursor-pointer text-lg" href="#"> Charlie Villalobos. </a>
@@ -16,27 +16,23 @@
 
             <LangSwitcher />
         </nav>
-    </NuxtLayout>
+    </section>
 </template>
 
 <script setup>
 const { t } = useI18n();
 const links = computed(() => [
     {
-        name: t('navBar.services'),
-        href: '#services',
+        name: t("navBar.services"),
+        href: "#services",
     },
     {
-        name: t('navBar.solutions'),
-        href: '#solutions',
+        name: t("navBar.solutions"),
+        href: "#solutions",
     },
     {
-        name: t('navBar.aboutMe'),
-        href: '#aboutMe',
-    },
-    {
-        name: t('navBar.contact'),
-        href: '#contact',
+        name: t("navBar.aboutMe"),
+        href: "#aboutMe",
     },
 ]);
 </script>

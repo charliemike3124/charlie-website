@@ -22,11 +22,11 @@
                     />
                 </div>
                 <div data-aos="fade-right" data-aos-delay="200" class="text-center lg:text-left mb-20 lg:mb-0">
-                    <p class="text-5xl font-bold mb-8">Here's what I can deliver.</p>
+                    <p class="text-5xl font-bold mb-8">{{ $t("services.title") }}</p>
                     <p class="text-xl">
-                        Leverage the expertise of a seasoned web developer to elevate your online presence and achieve
-                        exceptional results.
+                        {{ $t("services.subtitle") }}
                     </p>
+                    <UiButton class="translate-y-8" primary>{{ $t("buttons.contact") }}</UiButton>
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row w-full lg:w-1/2 lg:justify-normal justify-center">
@@ -35,37 +35,40 @@
                         class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 -translate-y-10 sm:-rotate-1"
                     >
                         <div class="icon-wrapper text-primary"><UiIcon icon="web" /></div>
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">Web Development</p>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">
+                            {{ $t("services.webDevelopment") }}
+                        </p>
                         <p class="text-s text-gray-600 sm:rotate-1">
-                            Craft exceptional websites with cutting-edge technologies, smooth UX, and responsive
-                            designs.
+                            {{ $t("services.webDevelopmentText") }}
                         </p>
                     </div>
                     <div
                         class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 -translate-y-10 sm:-rotate-1"
                     >
                         <div class="icon-wrapper text-accent-1"><UiIcon icon="cog" /></div>
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">API Integration</p>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">{{ $t("services.api") }}</p>
                         <p class="text-s text-gray-600 sm:rotate-1">
-                            Seamlessly integrate third-party APIs to enhance functionality and deliver seamless
-                            experiences.
+                            {{ $t("services.apiText") }}
                         </p>
                     </div>
                 </div>
                 <div class="flex flex-col gap-y-8 pl-4 self-center" data-aos="fade-left">
                     <div class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 sm:rotate-1">
                         <div class="icon-wrapper text-accent-2"><UiIcon icon="consulting" /></div>
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">Consulting</p>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">
+                            {{ $t("services.consulting") }}
+                        </p>
                         <p class="text-s text-gray-600 sm:-rotate-1">
-                            Analyze, optimize, and achieve your web goals through project collaboration and expert
-                            recommendations.
+                            {{ $t("services.consultingText") }}
                         </p>
                     </div>
                     <div class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 sm:rotate-1">
                         <div class="icon-wrapper text-gray-600"><UiIcon icon="tutoring" /></div>
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">Tutoring</p>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">
+                            {{ $t("services.tutoring") }}
+                        </p>
                         <p class="text-s text-gray-600 sm:-rotate-1">
-                            Gain insights and expand your skills with expert guidance with personalized sessions.
+                            {{ $t("services.tutoringText") }}
                         </p>
                     </div>
                 </div>

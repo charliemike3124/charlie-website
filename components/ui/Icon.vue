@@ -13,28 +13,23 @@ import {
     mdiAccountTie,
     mdiSchoolOutline,
     mdiWhatsapp,
+    mdiArrowDownRight,
 } from "@mdi/js";
 
 const props = defineProps<{ icon: String }>();
 
+const iconMap = {
+    linkedin: mdiLinkedin,
+    github: mdiGithub,
+    openInNew: mdiOpenInNew,
+    web: mdiWeb,
+    cog: mdiCogOutline,
+    consulting: mdiAccountTie,
+    tutoring: mdiSchoolOutline,
+    whatsapp: mdiWhatsapp,
+    arrowDownRight: mdiArrowDownRight,
+};
 const path = computed(() => {
-    switch (props.icon) {
-        case "linkedin":
-            return mdiLinkedin;
-        case "github":
-            return mdiGithub;
-        case "openInNew":
-            return mdiOpenInNew;
-        case "web":
-            return mdiWeb;
-        case "cog":
-            return mdiCogOutline;
-        case "consulting":
-            return mdiAccountTie;
-        case "tutoring":
-            return mdiSchoolOutline;
-        case "whatsapp":
-            return mdiWhatsapp;
-    }
+    return iconMap[props.icon] || null;
 });
 </script>

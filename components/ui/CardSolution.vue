@@ -16,7 +16,7 @@
             </div>
             <div class="flex-grow flex items-end py-8">
                 <a :href="props.href" target="_blank" class="underline flex gap-2">
-                    Visit Website <UiIcon icon="openInNew" class="w-4"
+                    {{ $t("solutions.visit") }} <UiIcon icon="openInNew" class="w-4"
                 /></a>
             </div>
         </div>
@@ -69,7 +69,7 @@ const randomHue = `${randomValue}deg`;
             top: 0;
             left: 0;
             opacity: 0.7;
-            filter: blur(7px) hue-rotate(v-bind('randomHue'));
+            filter: blur(7px) hue-rotate(v-bind("randomHue"));
         }
     }
 }

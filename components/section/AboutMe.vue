@@ -1,7 +1,7 @@
 <template>
-    <NuxtLayout name="section">
+    <NuxtLayout name="section" id="aboutMe">
         <div class="about-me">
-            <p class="text-center text-6xl font-bold" data-aos="fade-right">About Me</p>
+            <p class="text-center text-6xl font-bold" data-aos="fade-right">{{ $t("aboutMe.title") }}</p>
             <UiDivider class="mt-3 mb-10 mx-auto" data-aos="fade-right" />
 
             <div class="flex flex-col items-center gap-4">
@@ -17,7 +17,7 @@
                     <p>{{ $t("aboutMe.intro") }}</p>
                 </div>
 
-                <div class="flex gap-4 flex-wrap w-7/12 justify-center my-8">
+                <div class="flex gap-4 flex-wrap lg:w-7/12 justify-center my-8">
                     <div data-aos="fade-up" :data-aos-delay="200 * i" v-for="(tech, i) in techs" :key="i">
                         <div
                             class="p-4 shadow-md bg-white rounded-xl flex justify-center items-center duration-200 hover:-translate-y-1"
@@ -58,7 +58,7 @@ import cSharp from "@/assets/csharp.png";
 useBlurEffect("me-img");
 const { t } = useI18n();
 
-const experiences = [
+const experiences = reactive([
     {
         year: 2023,
         role: "Sr. Frontend Engineer",
@@ -84,7 +84,7 @@ const experiences = [
         company: "Puerto Bahía",
         description: "Create and maintain functionalities for the company's web portal.",
     },
-];
+]);
 
 const techs = [
     { import: vueImage, name: "Vue" },

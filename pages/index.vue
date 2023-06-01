@@ -10,8 +10,8 @@
             <img src="@/assets/cta-bottom.png" alt="Bottom fade" class="absolute w-screen" style="bottom: -1px" />
             <SectionLandingPageCta />
         </div>
-        <LazySectionServices />
         <LazySectionSolutions />
+        <LazySectionServices />
         <LazySectionAboutMe />
         <LazySectionFooter />
     </div>
@@ -19,13 +19,13 @@
 
 <script setup>
 definePageMeta({
-    title: 'Charlie Villalobos',
+    title: "Charlie Villalobos",
 });
 useSeoMeta({
-    title: 'Charlie Villalobos',
-    ogTitle: 'Charlie Villalobos',
-    description: 'This is my amazing site, let me tell you all about it.',
-    ogDescription: 'This is my amazing site, let me tell you all about it.',
-    ogImage: 'https://example.com/image.png',
+    title: "Charlie Villalobos",
+    ogTitle: "Charlie Villalobos",
+    description: "This is my amazing site, let me tell you all about it.",
+    ogDescription: "This is my amazing site, let me tell you all about it.",
+    ogImage: "https://example.com/image.png",
 });
 </script>
