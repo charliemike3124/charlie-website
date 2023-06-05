@@ -20,19 +20,19 @@
 </template>
 
 <script setup>
-const { t } = useI18n();
-const links = computed(() => [
-    {
-        name: t("navBar.services"),
-        href: "#services",
-    },
-    {
-        name: t("navBar.solutions"),
-        href: "#solutions",
-    },
-    {
-        name: t("navBar.aboutMe"),
-        href: "#aboutMe",
-    },
-]);
+    const { t } = useI18n();
+    const links = computed(() => [
+        {
+            name: t("navBar.services"),
+            href: "#services",
+        },
+        {
+            name: t("navBar.solutions"),
+            href: "#solutions",
+        },
+        {
+            name: t("navBar.aboutMe"),
+            href: "#aboutMe",
+        },
+    ]);
 </script>

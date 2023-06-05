@@ -43,92 +43,92 @@
 </template>
 
 <script setup>
-import vueImage from "@/assets/vue.png";
-import nuxtImage from "@/assets/nuxt.png";
-import firebaseImage from "@/assets/firebase.png";
-import htmlImage from "@/assets/html.png";
-import cssImage from "@/assets/css.png";
-import javascriptImage from "@/assets/javascript.png";
-import typescriptImage from "@/assets/typescript.png";
-import pythonImage from "@/assets/python.png";
-import awsImage from "@/assets/aws.png";
-import sqlImage from "@/assets/sql.png";
-import cSharp from "@/assets/csharp.png";
+    import vueImage from "@/assets/vue.png";
+    import nuxtImage from "@/assets/nuxt.png";
+    import firebaseImage from "@/assets/firebase.png";
+    import htmlImage from "@/assets/html.png";
+    import cssImage from "@/assets/css.png";
+    import javascriptImage from "@/assets/javascript.png";
+    import typescriptImage from "@/assets/typescript.png";
+    import pythonImage from "@/assets/python.png";
+    import awsImage from "@/assets/aws.png";
+    import sqlImage from "@/assets/sql.png";
+    import cSharp from "@/assets/csharp.png";
 
-useBlurEffect("me-img");
-const { t } = useI18n();
+    useBlurEffect("me-img");
+    const { t } = useI18n();
 
-const experiences = reactive([
-    {
-        year: 2023,
-        role: "Sr. Frontend Engineer",
-        company: "Unosquare",
-        description: "Collaborated with diverse teams for US-based companies and clients.",
-        isCurrent: true,
-    },
-    {
-        year: 2022,
-        role: "Sr. Software Engineer Consultant",
-        company: "VASS Latam",
-        description: "Provide consultancy services for diverse project types and clients.",
-    },
-    {
-        year: 2020,
-        role: "Fullstack Software Developer",
-        company: "NSerio / Codifico",
-        description: "Led the development and maintenance of multiple web applications.",
-    },
-    {
-        year: 2019,
-        role: "Junior Fullstack Developer",
-        company: "Puerto Bahía",
-        description: "Create and maintain functionalities for the company's web portal.",
-    },
-]);
+    const experiences = reactive([
+        {
+            year: 2023,
+            role: "Sr. Frontend Engineer",
+            company: "Unosquare",
+            description: "Collaborated with diverse teams for US-based companies and clients.",
+            isCurrent: true,
+        },
+        {
+            year: 2022,
+            role: "Sr. Software Engineer Consultant",
+            company: "VASS Latam",
+            description: "Provide consultancy services for diverse project types and clients.",
+        },
+        {
+            year: "2020-2021",
+            role: "Fullstack Software Developer",
+            company: "NSerio / Codifico",
+            description: "Led the development and maintenance of multiple web applications.",
+        },
+        {
+            year: 2019,
+            role: "Junior Fullstack Developer",
+            company: "Puerto Bahía",
+            description: "Create and maintain functionalities for the company's web portal.",
+        },
+    ]);
 
-const techs = [
-    { import: vueImage, name: "Vue" },
-    { import: nuxtImage, name: "Nuxt" },
-    { import: firebaseImage, name: "Firebase" },
-    { import: htmlImage, name: "HTML" },
-    { import: cssImage, name: "CSS" },
-    { import: javascriptImage, name: "JavaScript" },
-    { import: typescriptImage, name: "TypeScript" },
-    { import: cSharp, name: "Python" },
-    { import: pythonImage, name: "Python" },
-    { import: awsImage, name: "AWS" },
-    { import: sqlImage, name: "SQL" },
-];
+    const techs = [
+        { import: vueImage, name: "Vue" },
+        { import: nuxtImage, name: "Nuxt" },
+        { import: firebaseImage, name: "Firebase" },
+        { import: htmlImage, name: "HTML" },
+        { import: cssImage, name: "CSS" },
+        { import: javascriptImage, name: "JavaScript" },
+        { import: typescriptImage, name: "TypeScript" },
+        { import: cSharp, name: "Python" },
+        { import: pythonImage, name: "Python" },
+        { import: awsImage, name: "AWS" },
+        { import: sqlImage, name: "SQL" },
+    ];
 </script>
 
 <style lang="scss" scoped>
-.about-me {
-    position: relative;
+    .about-me {
+        position: relative;
 
-    .experience-card {
-        min-width: 260px;
-        height: 220px;
-        padding: 30px 20px;
-        margin-right: 10px;
-        display: inline-block;
-        background: white;
-        @media (min-width: 768px) {
-            min-width: 360px;
-            margin-right: 20px;
+        .experience-card {
+            min-width: 260px;
+            height: 220px;
+            padding: 30px 20px;
+            margin-right: 10px;
+            display: inline-block;
+            background: white;
+            @media (min-width: 768px) {
+                min-width: 360px;
+                margin-right: 20px;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px; /* Set the width of the scrollbar */
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--primary); /* Set the color of the scrollbar thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #5aad99; /* Set the color of the scrollbar thumb on hover */
         }
     }
-
-    ::-webkit-scrollbar {
-        width: 4px; /* Set the width of the scrollbar */
-        border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--primary); /* Set the color of the scrollbar thumb */
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: #5aad99; /* Set the color of the scrollbar thumb on hover */
-    }
-}
 </style>

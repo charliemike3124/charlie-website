@@ -24,53 +24,53 @@
 </template>
 
 <script setup>
-const props = defineProps({
-    img: String,
-    title: String,
-    description: String,
-    href: String,
-});
-const min = -20;
-const max = 20;
-const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
-const randomHue = `${randomValue}deg`;
+    const props = defineProps({
+        img: String,
+        title: String,
+        description: String,
+        href: String,
+    });
+    const min = -20;
+    const max = 20;
+    const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
+    const randomHue = `${randomValue}deg`;
 </script>
 
 <style lang="scss" scoped>
-.card {
-    min-height: 300px;
-    width: 285px;
-    background: white;
-    overflow: hidden;
-    transition: all 0.7s ease;
-
-    .thumbnail {
-        width: 100%;
-        height: 215px;
-        padding: 10px;
+    .card {
+        min-height: 300px;
+        width: 285px;
+        background: white;
         overflow: hidden;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .preview {
-            cursor: pointer;
-            filter: drop-shadow(2px 4px 6px gray);
-            transition: all 300ms ease;
-            &:hover {
-                rotate: 5deg;
-                scale: 1.05;
+        transition: all 0.7s ease;
+
+        .thumbnail {
+            width: 100%;
+            height: 215px;
+            padding: 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .preview {
+                cursor: pointer;
+                filter: drop-shadow(2px 4px 6px gray);
+                transition: all 300ms ease;
+                &:hover {
+                    rotate: 5deg;
+                    scale: 1.05;
+                }
+            }
+            .bg-texture {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.7;
+                filter: blur(7px) hue-rotate(v-bind("randomHue"));
             }
         }
-        .bg-texture {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0.7;
-            filter: blur(7px) hue-rotate(v-bind("randomHue"));
-        }
     }
-}
 </style>

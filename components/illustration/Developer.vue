@@ -2673,36 +2673,36 @@
 </template>
 
 <style>
-.filter-dev {
-    filter: hue-rotate(330deg) saturate(1.2);
-}
+    .filter-dev {
+        filter: hue-rotate(330deg) saturate(1.2);
+    }
 
-svg#freepik_stories-cross-platform-software:not(.animated) .animable {
-    opacity: 0;
-}
-svg#freepik_stories-cross-platform-software.animated #freepik--gears-3--inject-6 {
-    animation: 6s Infinite linear floating;
-    animation-delay: 0s;
-}
-svg#freepik_stories-cross-platform-software.animated #freepik--gears-1--inject-6 {
-    animation: 6s Infinite linear floating;
-    animation-delay: 0s;
-}
-svg#freepik_stories-cross-platform-software.animated #freepik--Arrow--inject-6 {
-    animation: 6s Infinite linear floating;
-    animation-delay: 0.5s;
-}
-@keyframes floating {
-    0% {
-        opacity: 1;
-        transform: translateY(0px);
+    svg#freepik_stories-cross-platform-software:not(.animated) .animable {
+        opacity: 0;
     }
-    50% {
-        transform: translateY(-10px);
+    svg#freepik_stories-cross-platform-software.animated #freepik--gears-3--inject-6 {
+        animation: 6s Infinite linear floating;
+        animation-delay: 0s;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
+    svg#freepik_stories-cross-platform-software.animated #freepik--gears-1--inject-6 {
+        animation: 6s Infinite linear floating;
+        animation-delay: 0s;
     }
-}
+    svg#freepik_stories-cross-platform-software.animated #freepik--Arrow--inject-6 {
+        animation: 6s Infinite linear floating;
+        animation-delay: 0.5s;
+    }
+    @keyframes floating {
+        0% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
 </style>

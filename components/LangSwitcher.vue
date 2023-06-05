@@ -20,25 +20,25 @@
 </template>
 
 <script setup>
-const { locale, t } = useI18n();
-const esRef = ref(null);
-const enRef = ref(null);
+    const { locale, t } = useI18n();
+    const esRef = ref(null);
+    const enRef = ref(null);
 
-onMounted(() => {
-    switchBoldLang(locale.value);
-});
+    onMounted(() => {
+        switchBoldLang(locale.value);
+    });
 
-watch(locale, (newVal) => {
-    switchBoldLang(newVal);
-});
+    watch(locale, (newVal) => {
+        switchBoldLang(newVal);
+    });
 
-const switchBoldLang = (lang) => {
-    if (lang === 'es') {
-        esRef.value.classList.add('font-extrabold');
-        enRef.value.classList.remove('font-extrabold');
-    } else {
-        enRef.value.classList.add('font-extrabold');
-        esRef.value.classList.remove('font-extrabold');
-    }
-};
+    const switchBoldLang = (lang) => {
+        if (lang === "es") {
+            esRef.value.classList.add("font-extrabold");
+            enRef.value.classList.remove("font-extrabold");
+        } else {
+            enRef.value.classList.add("font-extrabold");
+            esRef.value.classList.remove("font-extrabold");
+        }
+    };
 </script>

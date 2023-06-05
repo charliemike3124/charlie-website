@@ -80,79 +80,79 @@
 </template>
 
 <style lang="scss" scoped>
-.services {
-    min-height: 600px;
-    position: relative;
-    > div {
+    .services {
         min-height: 600px;
-    }
+        position: relative;
+        > div {
+            min-height: 600px;
+        }
 
-    .card {
-        padding: 20px;
-        height: 200px;
-        width: 300px;
-        .icon-wrapper {
-            position: absolute;
-            top: -20px;
-            left: 15px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid var(--background-1);
-            background: white;
-            height: 50px;
-            width: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .card {
+            padding: 20px;
+            height: 200px;
+            width: 300px;
+            .icon-wrapper {
+                position: absolute;
+                top: -20px;
+                left: 15px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 4px solid var(--background-1);
+                background: white;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            > svg {
-                width: 33px;
-                height: 33px;
+                > svg {
+                    width: 33px;
+                    height: 33px;
+                }
             }
         }
-    }
 
-    .deliver {
-        width: 150px;
-        transform: scaleX(-1);
-        transform: scaleX(-1) rotate(7deg);
-        position: absolute;
-        top: 0;
-
-        @media (min-width: 1536px) {
+        .deliver {
             width: 150px;
-            top: 30px;
-            left: 220px;
+            transform: scaleX(-1);
+            transform: scaleX(-1) rotate(7deg);
+            position: absolute;
+            top: 0;
+
+            @media (min-width: 1536px) {
+                width: 150px;
+                top: 10px;
+                left: 220px;
+            }
+        }
+
+        .delivery-arrow {
+            position: absolute;
+            top: -20px;
+            transform: rotate(39deg);
+            left: 300px;
+
+            @media (min-width: 1024px) {
+                width: 140px;
+            }
+            @media (min-width: 1280px) {
+                top: -50px;
+                left: 380px;
+                width: 170px;
+            }
+            @media (min-width: 1536px) {
+                left: 400px;
+                width: 340px;
+            }
+        }
+
+        .bg-text {
+            font-size: 400px;
+            position: absolute;
+            opacity: 0.02;
+            bottom: 20%;
+            left: -300px;
+            filter: blur(5px);
         }
     }
-
-    .delivery-arrow {
-        position: absolute;
-        top: -20px;
-        transform: rotate(39deg);
-        left: 300px;
-
-        @media (min-width: 1024px) {
-            width: 140px;
-        }
-        @media (min-width: 1280px) {
-            top: -50px;
-            left: 380px;
-            width: 170px;
-        }
-        @media (min-width: 1536px) {
-            left: 400px;
-            width: 340px;
-        }
-    }
-
-    .bg-text {
-        font-size: 400px;
-        position: absolute;
-        opacity: 0.02;
-        bottom: 20%;
-        left: -300px;
-        filter: blur(5px);
-    }
-}
 </style>

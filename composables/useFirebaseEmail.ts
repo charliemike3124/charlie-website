@@ -1,5 +1,5 @@
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
 
 export function useFirebaseEmail() {
     const config = useRuntimeConfig();
@@ -15,7 +15,7 @@ export function useFirebaseEmail() {
     const app = initializeApp(firebaseConfig);
 
     const db = getFirestore(app);
-    const MAIL_COLLECTION_NAME = 'mail';
+    const MAIL_COLLECTION_NAME = "mail";
 
     type Email = {
         to: String;
@@ -31,7 +31,7 @@ export function useFirebaseEmail() {
                 html: email.html,
             },
         });
-        console.log('Email sent with doc ID: ', docRef.id);
+        console.log("Email sent with doc ID: ", docRef.id);
     }
 
     return {

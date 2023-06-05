@@ -30,11 +30,9 @@
                             {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="w-5" />
                         </UiButton>
                     </a>
-                    <a href="https://wa.me/573174027001" target="_blank">
-                        <UiButton data-aos="fade-right" data-aos-delay="600" outlined>
-                            {{ $t("buttons.contact") }}
-                        </UiButton>
-                    </a>
+                    <UiButton data-aos="fade-right" data-aos-delay="600" outlined @click="sendEmail">
+                        {{ $t("buttons.contact") }}
+                    </UiButton>
                 </div>
             </div>
             <div class="img-container">
@@ -45,37 +43,37 @@
 </template>
 
 <script setup>
-const mail = useFirebaseEmail();
-function sendEmail() {
-    mail.sendEmail({
-        to: "carlosvillalobos1047@gmail.com",
-        subject: "test",
-        html: "holardo",
-    });
-}
+    const mail = useFirebaseEmail();
+    function sendEmail() {
+        mail.sendEmail({
+            to: "carlosvillalobos1047@gmail.com",
+            subject: "test",
+            html: "holardo",
+        });
+    }
 </script>
 
 <style lang="scss" scoped>
-.landing-page-cta {
-    height: 750px;
+    .landing-page-cta {
+        height: 750px;
 
-    .heading-cta {
-        filter: drop-shadow(0px 0px 3px white);
-    }
+        .heading-cta {
+            filter: drop-shadow(0px 0px 3px white);
+        }
 
-    .img-container {
-        position: relative;
-        height: 50%;
-        width: 400px;
-        @media (min-width: 768px) {
-            width: 500px;
-        }
-        @media (min-width: 1280px) {
-            width: 600px;
-        }
-        > svg {
-            bottom: -100px;
+        .img-container {
+            position: relative;
+            height: 50%;
+            width: 400px;
+            @media (min-width: 768px) {
+                width: 500px;
+            }
+            @media (min-width: 1280px) {
+                width: 600px;
+            }
+            > svg {
+                bottom: -100px;
+            }
         }
     }
-}
 </style>
