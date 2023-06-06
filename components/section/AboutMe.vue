@@ -39,7 +39,7 @@
 
                 <div class="relative w-full" data-aos="fade-right" data-aos-delay="400">
                     <img
-                        src="fade-overflow.png"
+                        src="@/public/fade-overflow.png"
                         loading="lazy"
                         class="absolute top-0 z-10 pointer-events-none w-full h-full invisible sm:visible"
                     />
