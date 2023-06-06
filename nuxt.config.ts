@@ -38,6 +38,7 @@ export default defineNuxtConfig({
 
     image: {
         dir: "public",
+        provider: "netlify",
     },
 
     mail: {
