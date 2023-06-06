@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     },
 
     image: {
-        dir: "assets",
+        dir: "public/images",
     },
 
     mail: {
