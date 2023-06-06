@@ -1,6 +1,6 @@
 export default {
     ctaHeading: {
-        1: "¿Looking to build an ",
+        1: "Looking to build an ",
         2: "exceptional ",
         3: "website?",
     },
@@ -33,7 +33,7 @@ export default {
     },
     services: {
         title: "Here's what I can deliver.",
-        subtitle: "Tailored solutions for your unique needs, delivering exceptional results",
+        subtitle: "Tailored solutions for your unique needs, delivering exceptional results.",
         webDevelopment: "Web Development",
         webDevelopmentText: "Craft exceptional and fast websites, smooth UX, perfect SEO and responsive designs.",
         consulting: "Consulting",

@@ -7,7 +7,7 @@
 
             <div class="text-center font-bold text-sm hidden sm:flex">
                 <div v-for="(l, i) in links" :key="i" class="m-5">
-                    <a class="cursor-pointer m-auto" :href="l.href"
+                    <a class="cursor-pointer m-auto" @click="scrollToElement(l.elementId)"
                         >{{ l.name }}
                         <UiHoverUnderline />
                     </a>
@@ -24,15 +24,20 @@
     const links = computed(() => [
         {
             name: t("navBar.services"),
-            href: "#services",
+            elementId: "services",
         },
         {
             name: t("navBar.solutions"),
-            href: "#solutions",
+            elementId: "solutions",
         },
         {
             name: t("navBar.aboutMe"),
-            href: "#aboutMe",
+            elementId: "aboutMe",
         },
     ]);
+
+    function scrollToElement(id) {
+        const el = document.getElementById(id);
+        el.scrollIntoView();
+    }
 </script>

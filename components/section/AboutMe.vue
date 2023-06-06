@@ -19,22 +19,39 @@
 
                 <div class="flex gap-4 flex-wrap lg:w-7/12 justify-center my-8">
                     <div data-aos="fade-up" :data-aos-delay="100 * i" v-for="(tech, i) in techs" :key="i">
-                        <div
-                            class="p-4 shadow-md bg-white rounded-xl flex justify-center items-center duration-200 hover:-translate-y-1"
-                        >
-                            <nuxt-img :src="tech.import" :alt="tech.name" loading="lazy" format="webp" />
-                        </div>
+                        <UiTooltip :text="tech.name">
+                            <div
+                                class="p-3 shadow-md bg-white rounded-xl flex justify-center items-center duration-200 w-16 h-16"
+                                :tooltip="tech.name"
+                            >
+                                <nuxt-img
+                                    :src="tech.import"
+                                    :alt="tech.name"
+                                    loading="lazy"
+                                    format="webp"
+                                    width="50"
+                                    height="50"
+                                />
+                            </div>
+                        </UiTooltip>
                     </div>
                 </div>
 
-                <div class="flex flex-nowrap overflow-x-auto w-full py-4" data-aos="fade-right" data-aos-delay="400">
-                    <div class="experience-card rounded-lg shadow-lg" v-for="(exp, i) in experiences" :key="i">
-                        <p class="text-md md:text-lg font-bold text-primary">
-                            {{ exp.year }} {{ exp.isCurrent ? " (Current Role)" : "" }}
-                        </p>
-                        <p class="text-md md:text-xl font-bold">{{ exp.role }}</p>
-                        <p class="text-xs md:text-sm font-bold text-gray-500">{{ exp.company }}</p>
-                        <p class="text-sm md:text-md mt-4">{{ exp.description }}</p>
+                <div class="relative w-full" data-aos="fade-right" data-aos-delay="400">
+                    <img
+                        src="fade-overflow.png"
+                        loading="lazy"
+                        class="absolute top-0 z-10 pointer-events-none w-full h-full invisible sm:visible"
+                    />
+                    <div class="flex flex-nowrap overflow-x-auto w-full py-4 px-8">
+                        <div class="experience-card rounded-lg shadow-lg" v-for="(exp, i) in experiences" :key="i">
+                            <p class="text-md md:text-lg font-bold text-primary">
+                                {{ exp.year }} {{ exp.isCurrent ? " (Current Role)" : "" }}
+                            </p>
+                            <p class="text-md md:text-xl font-bold">{{ exp.role }}</p>
+                            <p class="text-xs md:text-sm font-bold text-gray-500">{{ exp.company }}</p>
+                            <p class="text-sm md:text-md mt-4">{{ exp.description }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,7 +61,6 @@
 
 <script setup>
     const { t } = useI18n();
-    useBlurEffect("me-img");
 
     const experiences = ref([
         {
@@ -87,6 +103,7 @@
         { import: "aws.png", name: "AWS" },
         { import: "sql.png", name: "SQL" },
     ];
+    useBlurEffect("me-img");
 </script>
 
 <style lang="scss" scoped>

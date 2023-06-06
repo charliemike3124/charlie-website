@@ -1,5 +1,5 @@
 <template>
-    <div v-if="show">
+    <div>
         <div class="text-white bg-radial-gradient relative">
             <SectionNavBar />
             <nuxt-img
@@ -20,8 +20,8 @@
             <SectionLandingPageCta @showContactForm="modal?.show" />
         </div>
         <LazySectionServices @showContactForm="modal?.show" />
-        <LazySectionSolutions />
-        <LazySectionAboutMe />
+        <LazySectionSolutions :key="key" />
+        <LazySectionAboutMe :key="key" />
         <LazySectionFooter @showContactForm="modal?.show" />
 
         <UiModal ref="modal">
@@ -32,11 +32,10 @@
 
 <script setup>
     const modal = ref(null);
-    const show = ref(true);
+    const key = ref(1);
 
     const { locale } = useI18n();
-    watch(locale, (oldVal, newVal) => {
-        show.value = false;
-        nextTick(() => (show.value = true));
+    watch(locale, () => {
+        key.value++;
     });
 </script>

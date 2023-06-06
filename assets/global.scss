@@ -12,6 +12,15 @@ $btn-radial-gradient: radial-gradient(at top, var(--primary), var(--background-3
     background: $radial-gradient-2;
 }
 
+a {
+    &.offset-scroll {
+        display: block;
+        position: relative;
+        top: -250px;
+        visibility: hidden;
+    }
+}
+
 // Fonts
 @font-face {
     font-family: "Poppins";

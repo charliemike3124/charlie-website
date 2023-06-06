@@ -1,5 +1,6 @@
 <template>
-    <NuxtLayout name="section" class="services relative mt-64 text-primary-text" id="services">
+    <NuxtLayout name="section" class="services relative mt-64 text-primary-text">
+        <a class="offset-scroll" id="services" />
         <span class="bg-text pointer-events-none">DELIVERY</span>
         <div class="flex flex-col lg:flex-row">
             <div class="flex flex-col align-middle justify-center lg:w-1/2 lg:pr-36">
@@ -130,14 +131,14 @@
 
             @media (min-width: 1536px) {
                 width: 150px;
-                top: 10px;
-                left: 220px;
+                top: -10px;
+                left: 300px;
             }
         }
 
         .delivery-arrow {
             position: absolute;
-            top: -20px;
+            top: -40px;
             transform: rotate(39deg);
             left: 300px;
 
@@ -145,13 +146,14 @@
                 width: 140px;
             }
             @media (min-width: 1280px) {
-                top: -50px;
+                top: -70px;
                 left: 380px;
                 width: 170px;
             }
             @media (min-width: 1536px) {
-                left: 400px;
-                width: 340px;
+                top: -70px;
+                left: 480px;
+                width: 190px;
             }
         }
 
