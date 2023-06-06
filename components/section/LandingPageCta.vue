@@ -9,7 +9,7 @@
                     </p>
                     <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="200">{{ $t("ctaSubheading") }}</p>
                 </div>
-                <div class="flex justify-center gap-4" data-aos="fade-right" data-aos-delay="400">
+                <div class="flex justify-center items-center gap-4" data-aos="fade-right" data-aos-delay="400">
                     <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank" alt="linkedin">
                         <p class="flex gap-2 underline">
                             <UiIcon icon="linkedin" class="cursor-pointer" /></p
@@ -24,10 +24,10 @@
                         </p>
                     </a>
                 </div>
-                <div class="flex gap-6 justify-center">
+                <div class="flex gap-6 justify-center items-center">
                     <a href="#solutions">
                         <UiButton data-aos="fade-right" data-aos-delay="600">
-                            {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="w-5" />
+                            {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="!w-4 !h-4" />
                         </UiButton>
                     </a>
                     <UiButton data-aos="fade-right" data-aos-delay="600" outlined @click="sendEmail">
@@ -43,12 +43,13 @@
 </template>
 
 <script setup>
-    const mail = useFirebaseEmail();
+    const config = useRuntimeConfig();
+
+    const mail = useMail();
     function sendEmail() {
-        mail.sendEmail({
-            to: "carlosvillalobos1047@gmail.com",
-            subject: "test",
-            html: "holardo",
+        config.MAILER_TO_ADDRESS = "charliemike31245@gmail.com";
+        mail.send({
+            html: "",
         });
     }
 </script>
@@ -64,7 +65,7 @@
         .img-container {
             position: relative;
             height: 50%;
-            width: 400px;
+            width: 360px;
             @media (min-width: 768px) {
                 width: 500px;
             }

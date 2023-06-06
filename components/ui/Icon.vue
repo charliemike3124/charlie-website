@@ -1,5 +1,9 @@
 <template>
-    <SvgIcon type="mdi" :path="path" class="hover:-translate-y-2 hover:text-primary ease-in duration-200" />
+    <SvgIcon
+        type="mdi"
+        :path="path"
+        class="hover:-translate-y-2 hover:text-primary ease-in duration-200 w-8 h-8 md:w-6 md:h-8"
+    />
 </template>
 
 <script setup lang="ts">

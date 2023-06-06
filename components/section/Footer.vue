@@ -1,7 +1,18 @@
 <template>
     <div class="footer text-white bg-radial-gradient-2 relative overflow-hidden">
-        <img src="/bg.png" alt="Side fade" class="absolute top-0 left-0 opacity-5 w-full pointer-events-none" />
-        <img src="/cta-bottom.png" alt="Bottom fade" class="absolute w-screen rotate-180" style="top: -1px" />
+        <nuxt-img
+            format="webp"
+            src="/bg.png"
+            alt="Side fade"
+            class="absolute top-0 left-0 opacity-5 w-full pointer-events-none"
+        />
+        <nuxt-img
+            format="webp"
+            src="/cta-bottom.png"
+            alt="Bottom fade"
+            class="absolute w-screen rotate-180"
+            style="top: -1px"
+        />
         <div class="flex flex-col gap-6 text-center justify-center items-center h-full px-12">
             <p class="text-4xl lg:text-6xl font-bold" data-aos="fade-right">{{ $t("footer.interested") }}</p>
             <a href="https://wa.me/573174027001" target="_blank">
@@ -46,9 +57,9 @@
 
 <style>
     .footer {
-        height: 600px;
+        min-height: 600px;
         padding-top: 240px;
         margin-top: 240px;
-        padding-bottom: 100px;
+        padding-bottom: 40px;
     }
 </style>

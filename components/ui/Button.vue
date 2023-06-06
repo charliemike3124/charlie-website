@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button :class="btnClass">
+        <button :class="btnClass" class="flex justify-center items-center">
             <slot />
         </button>
     </div>

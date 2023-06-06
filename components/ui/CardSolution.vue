@@ -1,13 +1,14 @@
 <template>
     <div class="card rounded-2xl shadow-sm">
         <div class="thumbnail">
-            <img
-                src="@/assets/work-thumbnail.png"
+            <nuxt-img
+                src="/work-thumbnail.png"
                 alt="Solution Background Thumbnail"
                 loading="lazy"
                 class="bg-texture"
+                format="webp"
             />
-            <img :src="props.img" alt="Solution Preview" loading="lazy" class="preview" />
+            <nuxt-img :src="props.img" alt="Solution Preview" format="webp" loading="lazy" class="preview" />
         </div>
         <div class="px-8 py-4 text-left flex flex-col">
             <div>

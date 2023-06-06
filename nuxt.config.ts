@@ -1,17 +1,12 @@
 import tailwindConfig from "./tailwind.config";
 
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/i18n", "nuxt-mailer"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "nuxt-mail", "@nuxt/image-edge"],
 
+    // @ts-ignore
     app: {
         head: {
-            // @ts-ignore
             style: [{ children: tailwindConfig.cssRootVars, type: "text/css" }],
-            script: [
-                {
-                    src: "https://smtpjs.com/v3/smtp.js",
-                },
-            ],
         },
     },
 
@@ -23,22 +18,16 @@ export default defineNuxtConfig({
                 },
             },
         },
+        logLevel: "error",
     },
 
     runtimeConfig: {
-        MAILER_HOST: "smtp.gmail.com",
-        MAILER_PORT: "465",
-        MAILER_USER: "charliemike31245@gmail.com",
-        MAILER_PASS: "xnyhcziwoxvsxxny",
-        MAILER_SMTP_TLS: "",
-        MAILER_FROM_ADDRESS: "charliemike31245@gmail.com",
-        MAILER_FROM_NAME: "Charlie Villalobos",
-        FIREBASE_API_KEY: "AIzaSyDPvxgx2v_hyDWeYoa0fMZotRRA5qAi244",
-        FIREBASE_APP_ID: "1:51045206277:web:fd2c5cd9b6e1a1d92a8f6c",
-        FIREBASE_AUTH_DOMAIN: "charlie-website-e55f2.firebaseapp.com",
-        FIREBASE_STORAGE_BUCKET: "charlie-website-e55f2.appspot.com",
-        FIREBASE_MESSAGING_SENDER_ID: "51045206277",
-        FIREBASE_PROJECT_ID: "charlie-website-e55f2",
+        MAILER_HOST: "",
+        MAILER_PORT: "",
+        MAILER_USER: "",
+        MAILER_PASS: "",
+        MAILER_FROM_ADDRESS: "",
+        MAILER_FROM_NAME: "",
         public: {},
     },
 
@@ -47,7 +36,26 @@ export default defineNuxtConfig({
         defaultLocale: "en",
     },
 
-    experimental: {
-        componentIslands: true,
+    image: {
+        dir: "assets",
+    },
+
+    mail: {
+        message: {
+            to: process.env.MAILER_TO_ADDRESS,
+            from: process.env.MAILER_FROM_NAME,
+            subject: "Charlie Website Contact Form",
+        },
+        smtp: {
+            service: "gmail",
+            auth: {
+                user: process.env.MAILER_USER,
+                pass: process.env.MAILER_PASS,
+            },
+        },
+    },
+
+    axios: {
+        baseURL: process.env.BASE_URL,
     },
 });

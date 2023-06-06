@@ -8,7 +8,7 @@
     definePageMeta({
         title: "Charlie Villalobos",
     });
-    
+
     useSeoMeta({
         title: "Charlie Villalobos",
         ogTitle: "Charlie Villalobos",
@@ -19,11 +19,15 @@
     });
 
     const { locale } = useI18n();
-    if (navigator.language.includes("es")) locale.value = "es";
-    useHead({
-        htmlAttrs: {
-            lang: locale.value,
-        },
+    onNuxtReady(() => {
+        if (navigator.language.includes("es")) {
+            locale.value = "es";
+        }
+        useHead({
+            htmlAttrs: {
+                lang: locale,
+            },
+        });
     });
 </script>
 

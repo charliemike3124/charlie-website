@@ -6,7 +6,7 @@
 
             <div class="flex flex-col items-center gap-4">
                 <div>
-                    <img src="@/assets/me-nobg.png" alt="Charlie Villalobos" id="me-img" />
+                    <nuxt-img format="webp" loading="lazy" src="/me-nobg.png" alt="Charlie Villalobos" id="me-img" />
                 </div>
                 <p class="text-center text-2xl font-semibold" data-aos="fade-right">{{ $t("aboutMe.name") }}</p>
                 <div
@@ -18,11 +18,11 @@
                 </div>
 
                 <div class="flex gap-4 flex-wrap lg:w-7/12 justify-center my-8">
-                    <div data-aos="fade-up" :data-aos-delay="200 * i" v-for="(tech, i) in techs" :key="i">
+                    <div data-aos="fade-up" :data-aos-delay="100 * i" v-for="(tech, i) in techs" :key="i">
                         <div
                             class="p-4 shadow-md bg-white rounded-xl flex justify-center items-center duration-200 hover:-translate-y-1"
                         >
-                            <img :src="tech.import" :alt="tech.name" loading="lazy" />
+                            <nuxt-img :src="tech.import" :alt="tech.name" loading="lazy" format="webp" />
                         </div>
                     </div>
                 </div>
@@ -43,21 +43,7 @@
 </template>
 
 <script setup>
-    import vueImage from "@/assets/vue.png";
-    import nuxtImage from "@/assets/nuxt.png";
-    import firebaseImage from "@/assets/firebase.png";
-    import htmlImage from "@/assets/html.png";
-    import cssImage from "@/assets/css.png";
-    import javascriptImage from "@/assets/javascript.png";
-    import typescriptImage from "@/assets/typescript.png";
-    import pythonImage from "@/assets/python.png";
-    import awsImage from "@/assets/aws.png";
-    import sqlImage from "@/assets/sql.png";
-    import cSharp from "@/assets/csharp.png";
-
     useBlurEffect("me-img");
-    const { t } = useI18n();
-
     const experiences = reactive([
         {
             year: 2023,
@@ -87,17 +73,17 @@
     ]);
 
     const techs = [
-        { import: vueImage, name: "Vue" },
-        { import: nuxtImage, name: "Nuxt" },
-        { import: firebaseImage, name: "Firebase" },
-        { import: htmlImage, name: "HTML" },
-        { import: cssImage, name: "CSS" },
-        { import: javascriptImage, name: "JavaScript" },
-        { import: typescriptImage, name: "TypeScript" },
-        { import: cSharp, name: "Python" },
-        { import: pythonImage, name: "Python" },
-        { import: awsImage, name: "AWS" },
-        { import: sqlImage, name: "SQL" },
+        { import: "vue.png", name: "Vue" },
+        { import: "nuxt.png", name: "Nuxt" },
+        { import: "firebase.png", name: "Firebase" },
+        { import: "html.png", name: "HTML" },
+        { import: "css.png", name: "CSS" },
+        { import: "javascript.png", name: "JavaScript" },
+        { import: "typescript.png", name: "TypeScript" },
+        { import: "cSharp.png", name: "Python" },
+        { import: "python.png", name: "Python" },
+        { import: "aws.png", name: "AWS" },
+        { import: "sql.png", name: "SQL" },
     ];
 </script>
 

@@ -57,9 +57,9 @@ export default {
         puertobahia: "Create and maintain functionalities for the company's web portal.",
     },
     footer: {
-        interested: "Interested in working with me?",
+        interested: "Want to reach out?",
         linkedin: "My Linkedin",
         github: "My Github",
-        whatsapp: "Text me",
+        whatsapp: "",
     },
 };

@@ -4,21 +4,23 @@
         <div class="flex flex-col lg:flex-row">
             <div class="flex flex-col align-middle justify-center lg:w-1/2 lg:pr-36">
                 <div class="delivery-arrow hidden lg:block">
-                    <img
-                        src="@/assets/delivery-arrow.png"
+                    <nuxt-img
+                        src="/delivery-arrow.png"
                         alt="deliver"
                         data-aos="fade-left"
                         data-aos-delay="200"
                         loading="lazy"
+                        format="webp"
                     />
                 </div>
                 <div class="deliver hidden lg:block">
-                    <img
-                        src="@/assets/deliver.png"
+                    <nuxt-img
+                        src="/deliver.png"
                         alt="deliver"
                         data-aos="fade-left"
                         data-aos-delay="200"
                         loading="lazy"
+                        format="webp"
                     />
                 </div>
                 <div data-aos="fade-right" data-aos-delay="200" class="text-center lg:text-left mb-20 lg:mb-0">

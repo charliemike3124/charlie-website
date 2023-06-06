@@ -16,4 +16,5 @@ $btn-radial-gradient: radial-gradient(at top, var(--primary), var(--background-3
 @font-face {
     font-family: "Poppins";
     src: url("Poppins-Regular.ttf") format("truetype");
+    font-display: swap;
 }

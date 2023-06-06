@@ -63,6 +63,6 @@ export default {
         interested: "¿Interesado en trabajar conmigo?",
         linkedin: "Mi Linkedin",
         github: "Mi Github",
-        whatsapp: "Escríbeme",
+        whatsapp: "",
     },
 };
