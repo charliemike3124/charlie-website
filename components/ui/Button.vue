@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button :class="btnClass" class="flex justify-center items-center">
+        <button :type="type" :class="btnClass" class="flex justify-center items-center" :disabled="disabled">
             <slot />
         </button>
     </div>
@@ -10,6 +10,8 @@
     const props = defineProps({
         outlined: Boolean,
         primary: Boolean,
+        type: String,
+        disabled: Boolean,
     });
 
     const btnClass = computed(() => {

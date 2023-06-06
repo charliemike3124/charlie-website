@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="show">
         <div class="text-white bg-radial-gradient relative">
             <SectionNavBar />
             <nuxt-img
@@ -17,11 +17,26 @@
                 class="absolute w-screen"
                 style="bottom: -1px"
             />
-            <SectionLandingPageCta />
+            <SectionLandingPageCta @showContactForm="modal?.show" />
         </div>
-        <LazySectionServices />
+        <LazySectionServices @showContactForm="modal?.show" />
         <LazySectionSolutions />
         <LazySectionAboutMe />
-        <LazySectionFooter />
+        <LazySectionFooter @showContactForm="modal?.show" />
+
+        <UiModal ref="modal">
+            <FormsContact :closeModal="modal?.close" />
+        </UiModal>
     </div>
 </template>
+
+<script setup>
+    const modal = ref(null);
+    const show = ref(true);
+
+    const { locale } = useI18n();
+    watch(locale, (oldVal, newVal) => {
+        show.value = false;
+        nextTick(() => (show.value = true));
+    });
+</script>

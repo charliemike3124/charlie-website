@@ -15,9 +15,9 @@
         />
         <div class="flex flex-col gap-6 text-center justify-center items-center h-full px-12">
             <p class="text-4xl lg:text-6xl font-bold" data-aos="fade-right">{{ $t("footer.interested") }}</p>
-            <a href="https://wa.me/573174027001" target="_blank">
-                <UiButton data-aos="fade-right" data-aos-delay="200">{{ $t("buttons.contact") }}</UiButton>
-            </a>
+            <UiButton data-aos="fade-right" data-aos-delay="200" @click="$emit('showContactForm')">{{
+                $t("buttons.contact")
+            }}</UiButton>
             <div
                 class="flex flex-col gap-2 justify-center items-center mt-12"
                 data-aos="fade-right"

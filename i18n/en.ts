@@ -35,20 +35,19 @@ export default {
         title: "Here's what I can deliver.",
         subtitle: "Tailored solutions for your unique needs, delivering exceptional results",
         webDevelopment: "Web Development",
-        webDevelopmentText:
-            "Craft exceptional websites with cutting-edge technologies, smooth UX, and responsive designs.",
+        webDevelopmentText: "Craft exceptional and fast websites, smooth UX, perfect SEO and responsive designs.",
         consulting: "Consulting",
         consultingText:
             "Analyze, optimize, and achieve your web goals through project collaboration and expert recommendations.",
-        api: "Api Integration",
+        api: "API Integration",
         apiText: "Seamlessly integrate third-party APIs to enhance functionality and deliver seamless experiences.",
         tutoring: "Tutoring",
         tutoringText: "Gain insights and expand your skills with expert guidance with personalized sessions.",
     },
     aboutMe: {
         title: "About Me",
-        name: "Hi 👋 my name is Carlos Villalobos.",
-        intro: `I'm a seasoned Web Engineer with over 3 years of experience. 
+        name: "Hi 👋, my name is Carlos Villalobos.",
+        intro: `I'm a seasoned Web Engineer with over 4 years of experience. 
         I specialize in creating top-quality websites and applications tailored to meet clients' unique requirements.`,
         role: "Current Role",
         unosquare: "Collaborated with diverse teams for US-based companies and clients.",
@@ -61,5 +60,9 @@ export default {
         linkedin: "My Linkedin",
         github: "My Github",
         whatsapp: "",
+    },
+    contact: {
+        title: "Get in Touch",
+        subtitle: "Reach out to me for inquiries, collaborations, or any questions you may have.",
     },
 };

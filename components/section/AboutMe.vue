@@ -43,32 +43,34 @@
 </template>
 
 <script setup>
+    const { t } = useI18n();
     useBlurEffect("me-img");
-    const experiences = reactive([
+
+    const experiences = ref([
         {
             year: 2023,
             role: "Sr. Frontend Engineer",
             company: "Unosquare",
-            description: "Collaborated with diverse teams for US-based companies and clients.",
+            description: t("aboutMe.unosquare"),
             isCurrent: true,
         },
         {
             year: 2022,
             role: "Sr. Software Engineer Consultant",
             company: "VASS Latam",
-            description: "Provide consultancy services for diverse project types and clients.",
+            description: t("aboutMe.vass"),
         },
         {
             year: "2020-2021",
             role: "Fullstack Software Developer",
             company: "NSerio / Codifico",
-            description: "Led the development and maintenance of multiple web applications.",
+            description: t("aboutMe.codifico"),
         },
         {
             year: 2019,
             role: "Junior Fullstack Developer",
             company: "Puerto Bahía",
-            description: "Create and maintain functionalities for the company's web portal.",
+            description: t("aboutMe.puertobahia"),
         },
     ]);
 

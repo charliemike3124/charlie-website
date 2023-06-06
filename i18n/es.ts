@@ -12,7 +12,7 @@ export default {
     },
     navBar: {
         services: "Servicios",
-        solutions: "Historias de Éxito",
+        solutions: "Soluciones",
         aboutMe: "Acerca de Mí",
         contact: "Contacto",
     },
@@ -25,14 +25,14 @@ export default {
         bank: "Banco",
         realtime: "Chat en Tiempo Real",
         peopleFinders: "Buscador de Personas: Localiza a Cualquier Persona en Estados Unidos.",
-        ntune: "Herramienta de chat y colaboración en tiempo real similar.",
+        ntune: "Herramienta de chat y colaboración en tiempo real.",
         duranyalvarez: "Sitio web de portafolio y blog en línea.",
         mibanco: "Solución bancaria accesible para todos.",
         fundacion: "Banco colombiano impulsando cambios positivos y empoderando a las mujeres.",
         pcfactory: "Sitio de comercio electrónico centrado en productos de tecnología.",
     },
     services: {
-        title: "Esto es lo que puedo ofrecerte.",
+        title: "¿Qué puedo ofrecerte?",
         subtitle: "Soluciones a la medida para tus necesidades únicas, obteniendo resultados excepcionales.",
         webDevelopment: "Desarrollo Web",
         webDevelopmentText:
@@ -50,12 +50,12 @@ export default {
     aboutMe: {
         title: "Acerca de Mí",
         name: "¡Hola! 👋 Mi nombre es Carlos Villalobos.",
-        intro: `Soy un experimentado Ingeniero Web con más de 3 años de experiencia. 
+        intro: `Soy un experimentado Ingeniero Web con más de 4 años de experiencia. 
           Me especializo en crear sitios web y aplicaciones de alta calidad adaptados 
           para satisfacer las necesidades únicas de mis clientes.`,
         role: "Rol Actual",
         unosquare: "Colaboré con diversos equipos para empresas y clientes en Estados Unidos.",
-        vass: "Ofrezco servicios de consultoría para diferentes tipos de proyectos y clientes.",
+        vass: "Ofrecí servicios de consultoría para diferentes tipos de proyectos y clientes.",
         codifico: "Lideré el desarrollo y mantenimiento de múltiples aplicaciones web.",
         puertobahia: "Creé y mantuve funcionalidades para el portal web de la empresa.",
     },
@@ -64,5 +64,9 @@ export default {
         linkedin: "Mi Linkedin",
         github: "Mi Github",
         whatsapp: "",
+    },
+    contact: {
+        title: "Contáctame",
+        subtitle: "Ponte en contacto conmigo para consultas, colaboraciones o cualquier pregunta que puedas tener.",
     },
 };

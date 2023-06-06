@@ -30,7 +30,7 @@
                             {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="!w-4 !h-4" />
                         </UiButton>
                     </a>
-                    <UiButton data-aos="fade-right" data-aos-delay="600" outlined @click="sendEmail">
+                    <UiButton data-aos="fade-right" data-aos-delay="600" outlined @click="$emit('showContactForm')">
                         {{ $t("buttons.contact") }}
                     </UiButton>
                 </div>
@@ -41,18 +41,6 @@
         </div>
     </NuxtLayout>
 </template>
-
-<script setup>
-    const config = useRuntimeConfig();
-
-    const mail = useMail();
-    function sendEmail() {
-        config.MAILER_TO_ADDRESS = "charliemike31245@gmail.com";
-        mail.send({
-            html: "",
-        });
-    }
-</script>
 
 <style lang="scss" scoped>
     .landing-page-cta {

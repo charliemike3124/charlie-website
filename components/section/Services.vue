@@ -28,9 +28,11 @@
                     <p class="text-xl">
                         {{ $t("services.subtitle") }}
                     </p>
-                    <a href="https://wa.me/573174027001" target="_blank" class="flex justify-center lg:justify-start">
-                        <UiButton class="lg:translate-y-8" primary>{{ $t("buttons.contact") }}</UiButton>
-                    </a>
+                    <div class="flex justify-center lg:justify-start">
+                        <UiButton class="lg:translate-y-8" primary @click="$emit('showContactForm')">{{
+                            $t("buttons.contact")
+                        }}</UiButton>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row w-full lg:w-1/2 lg:justify-normal justify-center">
@@ -115,11 +117,16 @@
         }
 
         .deliver {
-            width: 150px;
+            width: 130px;
             transform: scaleX(-1);
             transform: scaleX(-1) rotate(7deg);
             position: absolute;
             top: 0;
+
+            @media (min-width: 1024px) {
+                width: 140px;
+                top: -30px;
+            }
 
             @media (min-width: 1536px) {
                 width: 150px;

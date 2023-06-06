@@ -18,6 +18,7 @@
         mdiSchoolOutline,
         mdiWhatsapp,
         mdiArrowDownRight,
+        mdiClose,
     } from "@mdi/js";
 
     const props = defineProps<{ icon: String }>();
@@ -32,7 +33,9 @@
         tutoring: mdiSchoolOutline,
         whatsapp: mdiWhatsapp,
         arrowDownRight: mdiArrowDownRight,
+        close: mdiClose,
     };
+
     const path = computed(() => {
         return iconMap[props.icon] || null;
     });
