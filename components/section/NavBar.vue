@@ -7,7 +7,7 @@
 
             <div class="text-center font-bold text-sm hidden sm:flex">
                 <div v-for="(l, i) in links" :key="i" class="m-5">
-                    <a class="cursor-pointer m-auto" @click="scrollToElement(l.elementId)"
+                    <a class="cursor-pointer m-auto" :href="`#${l.elementId}`" @click.prevent="onLinkClick(l.elementId)"
                         >{{ l.name }}
                         <UiHoverUnderline />
                     </a>
@@ -36,7 +36,7 @@
         },
     ]);
 
-    function scrollToElement(id) {
+    function onLinkClick(id) {
         const el = document.getElementById(id);
         el.scrollIntoView();
     }

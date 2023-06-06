@@ -12,10 +12,9 @@ $btn-radial-gradient: radial-gradient(at top, var(--primary), var(--background-3
     background: $radial-gradient-2;
 }
 
-a {
+div {
     &.offset-scroll {
-        display: block;
-        position: relative;
+        position: absolute;
         top: -250px;
         visibility: hidden;
     }

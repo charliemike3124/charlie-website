@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout name="section" class="services relative mt-64 text-primary-text">
-        <a class="offset-scroll" id="services" />
+        <div class="offset-scroll" id="services"></div>
         <span class="bg-text pointer-events-none">DELIVERY</span>
         <div class="flex flex-col lg:flex-row">
             <div class="flex flex-col align-middle justify-center lg:w-1/2 lg:pr-36">
