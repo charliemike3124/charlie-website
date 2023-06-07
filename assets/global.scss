@@ -20,6 +20,16 @@ div {
     }
 }
 
+[data-aos] {
+    pointer-events: none;
+}
+.aos-animate {
+    pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+    transform: unset;
+}
+
 // Fonts
 @font-face {
     font-family: "Poppins";

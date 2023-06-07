@@ -2,7 +2,8 @@
     <SvgIcon
         type="mdi"
         :path="path"
-        class="hover:-translate-y-2 hover:text-primary ease-in duration-200 w-8 h-8 md:w-6 md:h-8"
+        class="ease-in duration-200 w-8 h-8 md:w-6 md:h-8"
+        :class="noHoverEffect ? '' : 'hover:-translate-y-2 hover:text-primary'"
     />
 </template>
 
@@ -19,9 +20,13 @@
         mdiWhatsapp,
         mdiArrowDownRight,
         mdiClose,
+        mdiHamburger,
     } from "@mdi/js";
 
-    const props = defineProps<{ icon: String }>();
+    const props = defineProps<{
+        icon: String;
+        noHoverEffect: Boolean;
+    }>();
 
     const iconMap = {
         linkedin: mdiLinkedin,
@@ -34,6 +39,7 @@
         whatsapp: mdiWhatsapp,
         arrowDownRight: mdiArrowDownRight,
         close: mdiClose,
+        hamburger: mdiHamburger,
     };
 
     const path = computed(() => {

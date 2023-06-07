@@ -47,7 +47,9 @@
         height: 750px;
 
         .heading-cta {
-            filter: drop-shadow(0px 0px 3px white);
+            @media (min-width: 768px) {
+                filter: drop-shadow(0px 0px 3px white);
+            }
         }
 
         .img-container {

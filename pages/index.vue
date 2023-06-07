@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="text-white bg-radial-gradient relative">
-            <SectionNavBar />
+            <SectionNavBar @showContactForm="modal?.show" />
             <nuxt-img
                 preload
                 format="webp"
