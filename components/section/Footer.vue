@@ -13,46 +13,63 @@
             class="absolute w-screen rotate-180"
             style="top: -1px"
         />
-        <div class="flex flex-col gap-6 text-center justify-center items-center h-full px-12">
+        <NuxtLayout name="section" class="flex flex-col gap-6 text-center justify-center items-center !mb-0">
             <p class="text-4xl lg:text-6xl font-bold" data-aos="fade-right">{{ $t("footer.interested") }}</p>
-            <UiButton data-aos="fade-right" data-aos-delay="200" @click="$emit('showContactForm')">{{
-                $t("buttons.contact")
-            }}</UiButton>
+            <FormsContact data-aos="fade-right" data-aos-delay="200" />
             <div
-                class="flex flex-col gap-2 justify-center items-center mt-12"
-                data-aos="fade-right"
+                class="flex flex-col gap-2 justify-center items-center mt-12 w-full"
+                data-aos="fade-up"
                 data-aos-delay="400"
-                data-aos-offset="-300"
             >
-                <LangSwitcher class="mb-8" />
-                <a :href="contactLinks.linkedin" target="_blank" alt="linkedin">
-                    <p class="flex gap-2 underline">
-                        <UiIcon icon="linkedin" class="cursor-pointer" />
-                        {{ $t("footer.linkedin") }}
-                    </p></a
-                >
-                <a :href="contactLinks.github" target="_blank" alt="github">
-                    <p class="flex gap-2 underline">
-                        <UiIcon icon="github" class="cursor-pointer" />
-                        {{ $t("footer.github") }}
-                    </p></a
-                >
-                <a href="https://wa.me/573174027001" target="_blank">
-                    <p class="flex gap-2 underline">
-                        <UiIcon icon="whatsapp" class="cursor-pointer" />
-                        {{ $t("footer.whatsapp") }} (+57) 317 4027001
-                    </p>
-                </a>
+                <div class="flex flex-col md:flex-row gap-12 md:gap-24 text-left justify-between">
+                    <div class="md:w-1/3">
+                        <p class="text-xl font-bold">Charlie Villalobos</p>
+                        <UiDivider class="mb-2" />
+                        <p>{{ $t("footer.TLDR") }}</p>
+                    </div>
+                    <div class="flex flex-col md:items-center md:w-1/3">
+                        <div>
+                            <p class="text-xl font-bold">{{ $t("footer.explore") }}</p>
+                            <UiDivider class="mb-2" />
+                            <a :href="`#${l.elementId}`" v-for="(l, i) in c.websiteLinks" :key="i" class="underline"
+                                ><p>
+                                    {{ l.name }}
+                                </p></a
+                            >
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:items-end md:w-1/3">
+                        <div>
+                            <p class="text-xl font-bold">{{ $t("footer.contact") }}</p>
+                            <UiDivider class="mb-2" />
+                            <p class="flex gap-2 items-center" v-for="(l, i) in c.contactLinks" :key="i">
+                                <UiIcon :icon="l.icon" />
+                                <a
+                                    :href="l.link"
+                                    target="_blank"
+                                    :alt="l.name"
+                                    v-if="l.link"
+                                    class="underline cursor-pointer"
+                                >
+                                    {{ l.text }}
+                                </a>
+                                <span v-else>{{ l.text }}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between gap-12 md:gap-24 mt-8">
+                    <p>© Copyright {{ new Date().getFullYear() }}</p>
+                    <LangSwitcher />
+                </div>
             </div>
-        </div>
+        </NuxtLayout>
     </div>
 </template>
 
 <script setup>
-    const contactLinks = {
-        linkedin: "https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US",
-        github: "https://github.com/charliemike3124",
-    };
+    const c = useConstants();
 </script>
 
 <style>

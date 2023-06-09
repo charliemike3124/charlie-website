@@ -1,44 +1,26 @@
 <template>
     <div class="contact-form">
-        <p class="text-5xl mb-4 font-bold text-primary">{{ $t("contact.title") }}</p>
-        <p class="text-md text-gray-700 mb-2">{{ $t("contact.subtitle") }}</p>
-        <div class="mb-8 flex gap-2">
-            <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank" alt="linkedin">
-                <p class="flex items-center gap-2 underline">
-                    <UiIcon icon="linkedin" class="cursor-pointer" /></p
-            ></a>
-            <a href="https://github.com/charliemike3124" target="_blank" alt="github">
-                <p class="flex items-center gap-2 underline">
-                    <UiIcon icon="github" class="cursor-pointer" /></p
-            ></a>
-            <a href="https://wa.me/573174027001" target="_blank">
-                <p class="flex items-center gap-2 underline">
-                    <UiIcon icon="whatsapp" class="cursor-pointer" />
-                </p>
-            </a>
-        </div>
-        <form @submit.prevent.stop="onSubmit" class="flex flex-col gap-4">
-            <label for="name">Name (Optional)</label>
+        <form @submit.prevent.stop="onSubmit" class="flex flex-col gap-4 text-left">
+            <label for="name">{{ $t("form.name") }}</label>
             <input
                 id="name"
-                autofocus
-                class="bg-white rounded-lg h-12 px-4 py-2 duration-700 outline-transparent focus-visible:outline-primary"
+                class="bg-white rounded-lg h-12 px-4 py-2 duration-700 outline-transparent focus-visible:outline-primary text-primary-text"
                 v-model="form.name"
             />
-            <label for="email">Email</label>
+            <label for="email">{{ $t("form.mail") }}</label>
             <input
                 id="email"
                 type="email"
-                class="bg-white rounded-lg h-12 px-4 py-2 duration-700 outline-transparent focus-visible:outline-primary"
+                class="bg-white rounded-lg h-12 px-4 py-2 duration-700 outline-transparent focus-visible:outline-primary text-primary-text"
                 required
                 v-model="form.email"
             />
-            <label for="message">Message</label>
+            <label for="message">{{ $t("form.message") }}</label>
             <textarea
                 id="message"
                 required
                 @keydown.enter="onsubmit"
-                class="bg-white rounded-lg h-24 px-4 py-2 duration-700 outline-transparent focus-visible:outline-primary resize-none"
+                class="bg-white rounded-lg h-24 px-4 py-2 duration-700 outline-transparent focus-visible:outline-primary resize-none text-primary-text"
                 v-model="form.message"
             />
             <UiButton type="submit" primary :disabled="submitBtn.disabled" :class="submitBtn.class">{{
@@ -89,5 +71,6 @@
 <style lang="scss" scoped>
     .contact-form {
         max-width: 600px;
+        min-width: 400px;
     }
 </style>

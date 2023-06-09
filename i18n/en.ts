@@ -1,16 +1,17 @@
-export default {
+const en = {
     ctaHeading: {
         1: "Looking to build an ",
         2: "exceptional ",
         3: "website?",
     },
     ctaSubheading:
-        "Hi 👋 I'm Charlie Villalobos, a freelance Web Developer dedicated to crafting exceptional digital solutions for your unique needs.",
+        "Hi! I'm Charlie Villalobos, a freelance Web Developer dedicated to crafting exceptional digital solutions for your unique needs.",
     buttons: {
         solutions: "Explore",
         contact: "Contact me!",
     },
     navBar: {
+        home: "Home",
         services: "Services",
         solutions: "Solutions",
         aboutMe: "About Me",
@@ -46,7 +47,7 @@ export default {
     },
     aboutMe: {
         title: "About Me",
-        name: "Hi 👋, my name is Carlos Villalobos.",
+        name: "Hi, my name is Carlos Villalobos.",
         intro: `I'm a seasoned Web Engineer with over 4 years of experience. 
         I specialize in creating top-quality websites and applications tailored to meet clients' unique requirements.`,
         role: "Current Role",
@@ -60,9 +61,19 @@ export default {
         linkedin: "My Linkedin",
         github: "My Github",
         whatsapp: "",
+        explore: "Explore",
+        contact: "Contact",
+        TLDR: "Web Engineer specialized in creating custom websites tailored to meet clients' unique requirements. ",
     },
     contact: {
         title: "Get in Touch",
         subtitle: "Reach out to me for inquiries, collaborations, or any questions you may have.",
     },
+    form: {
+        name: "Name (Optional)",
+        mail: "Email",
+        message: "Message",
+    },
 };
+
+export default en;

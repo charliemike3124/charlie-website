@@ -1,11 +1,23 @@
 import tailwindConfig from "./tailwind.config";
 
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "nuxt-mail", "@nuxt/image-edge"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "nuxt-mail", "@nuxt/image-edge", "@pinia/nuxt"],
 
-    // @ts-ignore
     app: {
         head: {
+            script: [
+                {
+                    src: "https://www.googletagmanager.com/gtag/js?id=G-J28JXHGG4T",
+                    async: true,
+                },
+                {
+                    innerHTML: `  window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                  
+                    gtag('config', 'G-J28JXHGG4T');`,
+                },
+            ],
             style: [{ children: tailwindConfig.cssRootVars, type: "text/css" }],
         },
     },
@@ -19,6 +31,7 @@ export default defineNuxtConfig({
             },
         },
         logLevel: "error",
+        define: {},
     },
 
     runtimeConfig: {
@@ -28,6 +41,13 @@ export default defineNuxtConfig({
         MAILER_PASS: "",
         MAILER_FROM_ADDRESS: "",
         MAILER_FROM_NAME: "",
+        FIREBASE_API_KEY: "",
+        FIREBASE_AUTH_DOMAIN: "",
+        FIREBASE_PROJECT_ID: "",
+        FIREBASE_STORAGE_BUCKET: "",
+        FIREBASE_MESSAGING_SENDER_ID: "",
+        FIREBASE_APP_ID: "",
+
         public: {},
     },
 

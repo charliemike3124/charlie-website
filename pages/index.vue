@@ -17,6 +17,7 @@
                 class="absolute w-screen"
                 style="bottom: -1px"
             />
+
             <SectionLandingPageCta @showContactForm="modal?.show" />
         </div>
         <LazySectionServices @showContactForm="modal?.show" />
@@ -25,17 +26,41 @@
         <LazySectionFooter @showContactForm="modal?.show" />
 
         <UiModal ref="modal">
+            <p class="text-5xl mb-4 font-bold text-primary">{{ configStore.msg.en.contact.title }}</p>
+            <p class="text-md text-gray-700 mb-2">{{ $t("contact.subtitle") }}</p>
+            <div class="mb-8 flex gap-2">
+                <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank" alt="linkedin">
+                    <p class="flex items-center gap-2 underline">
+                        <UiIcon icon="linkedin" class="cursor-pointer" /></p
+                ></a>
+                <a href="https://github.com/charliemike3124" target="_blank" alt="github">
+                    <p class="flex items-center gap-2 underline">
+                        <UiIcon icon="github" class="cursor-pointer" /></p
+                ></a>
+                <a href="https://wa.me/573174027001" target="_blank">
+                    <p class="flex items-center gap-2 underline">
+                        <UiIcon icon="whatsapp" class="cursor-pointer" />
+                    </p>
+                </a>
+            </div>
             <FormsContact :closeModal="modal?.close" />
         </UiModal>
     </div>
 </template>
 
 <script setup>
+    import { useConfigStore } from "@/store/config";
+    const configStore = useConfigStore();
+
     const modal = ref(null);
     const key = ref(1);
 
     const { locale } = useI18n();
     watch(locale, () => {
         key.value++;
+    });
+
+    definePageMeta({
+        middleware: "index",
     });
 </script>

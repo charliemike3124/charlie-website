@@ -5,12 +5,13 @@ export default {
         3: "sitio web?",
     },
     ctaSubheading:
-        "¡Hola! 👋 Soy Charlie Villalobos, un desarrollador web independiente dedicado a crear soluciones digitales excepcionales para tus necesidades únicas.",
+        "¡Hola! Soy Charlie Villalobos, un desarrollador web independiente dedicado a crear soluciones digitales excepcionales para tus necesidades únicas.",
     buttons: {
         solutions: "Explorar",
         contact: "¡Contáctame!",
     },
     navBar: {
+        home: "Inicio",
         services: "Servicios",
         solutions: "Soluciones",
         aboutMe: "Acerca de Mí",
@@ -49,7 +50,7 @@ export default {
     },
     aboutMe: {
         title: "Acerca de Mí",
-        name: "¡Hola! 👋 Mi nombre es Carlos Villalobos.",
+        name: "¡Hola! Mi nombre es Carlos Villalobos.",
         intro: `Soy un experimentado Ingeniero Web con más de 4 años de experiencia. 
           Me especializo en crear sitios web y aplicaciones de alta calidad adaptados 
           para satisfacer las necesidades únicas de mis clientes.`,
@@ -64,9 +65,17 @@ export default {
         linkedin: "Mi Linkedin",
         github: "Mi Github",
         whatsapp: "",
+        explore: "Explorar",
+        contact: "Contacto",
+        TLDR: "Ingeniero Web especializado en crear sitios web personalizados que cubren requerimientos únicos de los clientes. ",
     },
     contact: {
         title: "Contáctame",
         subtitle: "Ponte en contacto conmigo para consultas, colaboraciones o cualquier pregunta que puedas tener.",
+    },
+    form: {
+        name: "Nombre (Opcional)",
+        mail: "Email",
+        message: "Mensaje",
     },
 };

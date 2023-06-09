@@ -38,9 +38,10 @@
                 </div>
 
                 <div class="relative w-full" data-aos="fade-right" data-aos-delay="400">
-                    <img
-                        src="@/public/fade-overflow.png"
+                    <nuxt-img
+                        src="/fade-overflow.png"
                         alt="Fade Overflow"
+                        format="webp"
                         loading="lazy"
                         class="absolute top-0 z-10 pointer-events-none w-full h-full invisible sm:visible"
                     />

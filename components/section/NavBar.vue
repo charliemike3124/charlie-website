@@ -6,7 +6,7 @@
                     <a class="font-extrabold italic cursor-pointer text-lg" href="#"> Charlie Villalobos. </a>
                 </li>
                 <li class="text-center font-bold text-sm hidden md:flex">
-                    <div v-for="(l, i) in links" :key="i" class="m-5">
+                    <div v-for="(l, i) in c.websiteLinks" :key="i" class="m-5">
                         <a
                             class="cursor-pointer m-auto"
                             :href="`#${l.elementId}`"
@@ -28,7 +28,7 @@
                         :class="showHamburgerMenu ? 'opacity-100 translate-y-2' : 'opacity-0'"
                         class="absolute right-0 top-10 bg-background-1 rounded-sm shadow-lg text-primary-text p-2 z-50 duration-300 w-36 stickymenu"
                     >
-                        <div v-for="(l, i) in links" :key="i" class="m-5">
+                        <div v-for="(l, i) in c.websiteLinks" :key="i" class="m-5">
                             <a
                                 class="cursor-pointer m-auto"
                                 :href="`#${l.elementId}`"
@@ -57,21 +57,7 @@
 </template>
 
 <script setup>
-    const { t } = useI18n();
-    const links = computed(() => [
-        {
-            name: t("navBar.services"),
-            elementId: "services",
-        },
-        {
-            name: t("navBar.solutions"),
-            elementId: "solutions",
-        },
-        {
-            name: t("navBar.aboutMe"),
-            elementId: "aboutMe",
-        },
-    ]);
+    const c = useConstants();
     const showHamburgerMenu = ref(false);
 
     function onLinkClick(id) {

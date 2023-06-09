@@ -21,11 +21,12 @@
         mdiArrowDownRight,
         mdiClose,
         mdiHamburger,
+        mdiEmail,
     } from "@mdi/js";
 
     const props = defineProps<{
         icon: String;
-        noHoverEffect: Boolean;
+        noHoverEffect?: Boolean;
     }>();
 
     const iconMap = {
@@ -40,6 +41,7 @@
         arrowDownRight: mdiArrowDownRight,
         close: mdiClose,
         hamburger: mdiHamburger,
+        email: mdiEmail,
     };
 
     const path = computed(() => {
