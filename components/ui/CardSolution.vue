@@ -17,7 +17,7 @@
             </div>
             <div class="flex-grow flex items-end py-8">
                 <a :href="props.href" target="_blank" class="underline flex gap-2">
-                    {{ $t("solutions.visit") }} <UiIcon icon="openInNew" class="w-4"
+                    {{ configStore.msg.solutions.visit }} <UiIcon icon="openInNew" class="w-4"
                 /></a>
             </div>
         </div>
@@ -25,6 +25,7 @@
 </template>
 
 <script setup>
+    const configStore = useConfigStore();
     const props = defineProps({
         img: String,
         title: String,

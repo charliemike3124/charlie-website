@@ -26,8 +26,8 @@
         <LazySectionFooter @showContactForm="modal?.show" />
 
         <UiModal ref="modal">
-            <p class="text-5xl mb-4 font-bold text-primary">{{ configStore.msg.en.contact.title }}</p>
-            <p class="text-md text-gray-700 mb-2">{{ $t("contact.subtitle") }}</p>
+            <p class="text-5xl mb-4 font-bold text-primary">{{ configStore.msg.contact.title }}</p>
+            <p class="text-md text-gray-700 mb-2">{{ configStore.msg.contact.subtitle }}</p>
             <div class="mb-8 flex gap-2">
                 <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank" alt="linkedin">
                     <p class="flex items-center gap-2 underline">
@@ -49,16 +49,9 @@
 </template>
 
 <script setup>
-    import { useConfigStore } from "@/store/config";
     const configStore = useConfigStore();
 
     const modal = ref(null);
-    const key = ref(1);
-
-    const { locale } = useI18n();
-    watch(locale, () => {
-        key.value++;
-    });
 
     definePageMeta({
         middleware: "index",

@@ -7,7 +7,7 @@
     />
 </template>
 
-<script setup lang="ts">
+<script setup>
     import SvgIcon from "@jamescoyle/vue-icon";
     import {
         mdiLinkedin,
@@ -24,10 +24,10 @@
         mdiEmail,
     } from "@mdi/js";
 
-    const props = defineProps<{
-        icon: String;
-        noHoverEffect?: Boolean;
-    }>();
+    const props = defineProps({
+        icon: String,
+        noHoverEffect: Boolean,
+    });
 
     const iconMap = {
         linkedin: mdiLinkedin,

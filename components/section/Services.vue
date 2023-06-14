@@ -25,13 +25,13 @@
                     />
                 </div>
                 <div data-aos="fade-right" data-aos-delay="200" class="text-center lg:text-left mb-20 lg:mb-0">
-                    <p class="text-5xl font-bold mb-8">{{ $t("services.title") }}</p>
+                    <p class="text-5xl font-bold mb-8">{{ configStore.msg.services.title }}</p>
                     <p class="text-xl">
-                        {{ $t("services.subtitle") }}
+                        {{ configStore.msg.services.subtitle }}
                     </p>
                     <div class="flex justify-center lg:justify-start">
                         <UiButton class="lg:translate-y-8" primary @click="$emit('showContactForm')">{{
-                            $t("buttons.contact")
+                            configStore.msg.buttons.contact
                         }}</UiButton>
                     </div>
                 </div>
@@ -43,19 +43,21 @@
                     >
                         <div class="icon-wrapper text-primary"><UiIcon icon="web" /></div>
                         <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">
-                            {{ $t("services.webDevelopment") }}
+                            {{ configStore.msg.services.webDevelopment }}
                         </p>
                         <p class="text-s text-gray-600 sm:rotate-1">
-                            {{ $t("services.webDevelopmentText") }}
+                            {{ configStore.msg.services.webDevelopmentText }}
                         </p>
                     </div>
                     <div
                         class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 -translate-y-10 sm:-rotate-1"
                     >
                         <div class="icon-wrapper text-accent-1"><UiIcon icon="cog" /></div>
-                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">{{ $t("services.api") }}</p>
+                        <p class="text-xl font-bold mb-4 text-gray-700 sm:rotate-1 mt-4">
+                            {{ configStore.msg.services.api }}
+                        </p>
                         <p class="text-s text-gray-600 sm:rotate-1">
-                            {{ $t("services.apiText") }}
+                            {{ configStore.msg.services.apiText }}
                         </p>
                     </div>
                 </div>
@@ -63,19 +65,19 @@
                     <div class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 sm:rotate-1">
                         <div class="icon-wrapper text-accent-2"><UiIcon icon="consulting" /></div>
                         <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">
-                            {{ $t("services.consulting") }}
+                            {{ configStore.msg.services.consulting }}
                         </p>
                         <p class="text-s text-gray-600 sm:-rotate-1">
-                            {{ $t("services.consultingText") }}
+                            {{ configStore.msg.services.consultingText }}
                         </p>
                     </div>
                     <div class="card relative bg-white rounded-md shadow-xl lg:-translate-x-20 sm:rotate-1">
                         <div class="icon-wrapper text-gray-600"><UiIcon icon="tutoring" /></div>
                         <p class="text-xl font-bold mb-4 text-gray-700 sm:-rotate-1 mt-4">
-                            {{ $t("services.tutoring") }}
+                            {{ configStore.msg.services.tutoring }}
                         </p>
                         <p class="text-s text-gray-600 sm:-rotate-1">
-                            {{ $t("services.tutoringText") }}
+                            {{ configStore.msg.services.tutoringText }}
                         </p>
                     </div>
                 </div>
@@ -83,6 +85,10 @@
         </div>
     </NuxtLayout>
 </template>
+
+<script setup>
+    const configStore = useConfigStore();
+</script>
 
 <style lang="scss" scoped>
     .services {

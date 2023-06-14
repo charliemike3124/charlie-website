@@ -1,20 +1,22 @@
 <template>
     <NuxtLayout name="section" id="aboutMe">
         <div class="about-me">
-            <p class="text-center text-6xl font-bold" data-aos="fade-right">{{ $t("aboutMe.title") }}</p>
+            <p class="text-center text-6xl font-bold" data-aos="fade-right">{{ configStore.msg.aboutMe.title }}</p>
             <UiDivider class="mt-3 mb-10 mx-auto" data-aos="fade-right" />
 
             <div class="flex flex-col items-center gap-4">
                 <div>
                     <nuxt-img format="webp" loading="lazy" src="/me-nobg.png" alt="Charlie Villalobos" id="me-img" />
                 </div>
-                <p class="text-center text-2xl font-semibold" data-aos="fade-right">{{ $t("aboutMe.name") }}</p>
+                <p class="text-center text-2xl font-semibold" data-aos="fade-right">
+                    {{ configStore.msg.aboutMe.name }}
+                </p>
                 <div
                     class="lg:w-8/12 text-lg lg:text-xl flex items-center text-center"
                     data-aos="fade-right"
                     data-aos-delay="200"
                 >
-                    <p>{{ $t("aboutMe.intro") }}</p>
+                    <p>{{ configStore.msg.aboutMe.intro }}</p>
                 </div>
 
                 <div class="flex gap-4 flex-wrap lg:w-7/12 justify-center my-8">
@@ -62,33 +64,32 @@
 </template>
 
 <script setup>
-    const { t } = useI18n();
-
+    const configStore = useConfigStore();
     const experiences = ref([
         {
             year: 2023,
             role: "Sr. Frontend Engineer",
             company: "Unosquare",
-            description: t("aboutMe.unosquare"),
+            description: configStore.msg.aboutMe.unosquare,
             isCurrent: true,
         },
         {
             year: 2022,
             role: "Sr. Software Engineer Consultant",
             company: "VASS Latam",
-            description: t("aboutMe.vass"),
+            description: configStore.msg.aboutMe.vass,
         },
         {
             year: "2020-2021",
             role: "Fullstack Software Developer",
             company: "NSerio / Codifico",
-            description: t("aboutMe.codifico"),
+            description: configStore.msg.aboutMe.codifico,
         },
         {
             year: 2019,
             role: "Junior Fullstack Developer",
             company: "Puerto Bahía",
-            description: t("aboutMe.puertobahia"),
+            description: configStore.msg.aboutMe.puertobahia,
         },
     ]);
 

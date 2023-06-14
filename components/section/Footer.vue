@@ -14,7 +14,7 @@
             style="top: -1px"
         />
         <NuxtLayout name="section" class="flex flex-col gap-6 text-center justify-center items-center !mb-0">
-            <p class="text-4xl lg:text-6xl font-bold" data-aos="fade-right">{{ $t("footer.interested") }}</p>
+            <p class="text-4xl lg:text-6xl font-bold" data-aos="fade-right">{{ configStore.msg.footer.interested }}</p>
             <FormsContact data-aos="fade-right" data-aos-delay="200" />
             <div
                 class="flex flex-col gap-2 justify-center items-center mt-12 w-full"
@@ -25,11 +25,11 @@
                     <div class="md:w-1/3">
                         <p class="text-xl font-bold">Charlie Villalobos</p>
                         <UiDivider class="mb-2" />
-                        <p>{{ $t("footer.TLDR") }}</p>
+                        <p>{{ configStore.msg.footer.TLDR }}</p>
                     </div>
                     <div class="flex flex-col md:items-center md:w-1/3">
                         <div>
-                            <p class="text-xl font-bold">{{ $t("footer.explore") }}</p>
+                            <p class="text-xl font-bold">{{ configStore.msg.footer.explore }}</p>
                             <UiDivider class="mb-2" />
                             <a :href="`#${l.elementId}`" v-for="(l, i) in c.websiteLinks" :key="i" class="underline"
                                 ><p>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="flex flex-col md:items-end md:w-1/3">
                         <div>
-                            <p class="text-xl font-bold">{{ $t("footer.contact") }}</p>
+                            <p class="text-xl font-bold">{{ configStore.msg.footer.contact }}</p>
                             <UiDivider class="mb-2" />
                             <p class="flex gap-2 items-center" v-for="(l, i) in c.contactLinks" :key="i">
                                 <UiIcon :icon="l.icon" />
@@ -70,6 +70,7 @@
 
 <script setup>
     const c = useConstants();
+    const configStore = useConfigStore();
 </script>
 
 <style>

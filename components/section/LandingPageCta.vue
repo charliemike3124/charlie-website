@@ -4,10 +4,13 @@
             <div class="h-full py-2 flex flex-col text-center self-center">
                 <div>
                     <p class="mb-4 text-5xl font-bold" data-aos="fade-right">
-                        {{ $t("ctaHeading.1") }} <span class="heading-cta">{{ $t("ctaHeading.2") }}</span
-                        >{{ $t("ctaHeading.3") }}
+                        {{ configStore.msg.ctaHeading["1"] }}
+                        <span class="heading-cta">{{ configStore.msg.ctaHeading["2"] }}</span
+                        >{{ configStore.msg.ctaHeading["3"] }}
                     </p>
-                    <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="200">{{ $t("ctaSubheading") }}</p>
+                    <p class="mb-4 text-xl" data-aos="fade-right" data-aos-delay="200">
+                        {{ configStore.msg.ctaSubheading }}
+                    </p>
                 </div>
                 <div class="flex justify-center items-center gap-4" data-aos="fade-right" data-aos-delay="400">
                     <a href="https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US" target="_blank" alt="linkedin">
@@ -27,11 +30,11 @@
                 <div class="flex gap-6 justify-center items-center">
                     <a href="#solutions">
                         <UiButton data-aos="fade-right" data-aos-delay="600">
-                            {{ $t("buttons.solutions") }} <UiIcon icon="arrowDownRight" class="!w-4 !h-4" />
+                            {{ configStore.msg.buttons.solutions }} <UiIcon icon="arrowDownRight" class="!w-4 !h-4" />
                         </UiButton>
                     </a>
                     <UiButton data-aos="fade-right" data-aos-delay="600" outlined @click="$emit('showContactForm')">
-                        {{ $t("buttons.contact") }}
+                        {{ configStore.msg.buttons.contact }}
                     </UiButton>
                 </div>
             </div>
@@ -41,6 +44,10 @@
         </div>
     </NuxtLayout>
 </template>
+
+<script setup>
+    const configStore = useConfigStore();
+</script>
 
 <style lang="scss" scoped>
     .landing-page-cta {

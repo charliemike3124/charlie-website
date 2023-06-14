@@ -1,7 +1,7 @@
 import tailwindConfig from "./tailwind.config";
 
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "nuxt-mail", "@nuxt/image-edge", "@pinia/nuxt"],
+    modules: ["@nuxtjs/tailwindcss", "nuxt-mail", "@nuxt/image-edge", "@pinia/nuxt"],
 
     app: {
         head: {
@@ -11,11 +11,13 @@ export default defineNuxtConfig({
                     async: true,
                 },
                 {
-                    innerHTML: `  window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                  
-                    gtag('config', 'G-J28JXHGG4T');`,
+                    innerHTML: `  
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                    
+                        gtag('config', 'G-J28JXHGG4T');
+                    `,
                 },
             ],
             style: [{ children: tailwindConfig.cssRootVars, type: "text/css" }],
@@ -49,11 +51,6 @@ export default defineNuxtConfig({
         FIREBASE_APP_ID: "",
 
         public: {},
-    },
-
-    i18n: {
-        vueI18n: "./i18n/i18n.config.ts",
-        defaultLocale: "en",
     },
 
     image: {

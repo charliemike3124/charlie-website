@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+    const configStore = useConfigStore();
     definePageMeta({
         title: "Charlie Villalobos",
     });
@@ -18,16 +19,10 @@
             "Exceptional web development solutions tailored to your needs. Freelance web developer Carlos Villalobos crafts high-quality websites and applications using cutting-edge technologies. Explore success stories, consult for recommendations, integrate APIs seamlessly, and expand your skills. Contact Carlos Villalobos for digital excellence!",
     });
 
-    const { locale } = useI18n();
-    onNuxtReady(() => {
-        if (navigator.language.includes("es")) {
-            locale.value = "es";
-        }
-        useHead({
-            htmlAttrs: {
-                lang: locale,
-            },
-        });
+    useHead({
+        htmlAttrs: {
+            lang: configStore.lang,
+        },
     });
 </script>
 

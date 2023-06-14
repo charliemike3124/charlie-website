@@ -1,20 +1,20 @@
 export function useConstants() {
-    const { t } = useI18n();
+    const configStore = useConfigStore();
     const websiteLinks = [
         {
-            name: t("navBar.home"),
+            name: configStore.msg.navBar.home,
             elementId: "",
         },
         {
-            name: t("navBar.services"),
+            name: configStore.msg.navBar.services,
             elementId: "services",
         },
         {
-            name: t("navBar.solutions"),
+            name: configStore.msg.navBar.solutions,
             elementId: "solutions",
         },
         {
-            name: t("navBar.aboutMe"),
+            name: configStore.msg.navBar.aboutMe,
             elementId: "aboutMe",
         },
     ];
@@ -22,13 +22,13 @@ export function useConstants() {
     const contactLinks = [
         {
             name: "Linkedin",
-            text: t("footer.linkedin"),
+            text: configStore.msg.footer.linkedin,
             icon: "linkedin",
             link: "https://www.linkedin.com/in/cvillalobosgtz/?locale=en_US",
         },
         {
             name: "Github",
-            text: t("footer.github"),
+            text: configStore.msg.footer.github,
             icon: "github",
             link: "https://github.com/charliemike3124",
         },

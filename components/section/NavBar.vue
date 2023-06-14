@@ -48,7 +48,7 @@
                         primary
                         class="hidden md:block"
                     >
-                        {{ $t("buttons.contact") }}
+                        {{ configStore.msg.buttons.contact }}
                     </UiButton>
                 </li>
             </ul>
@@ -58,6 +58,7 @@
 
 <script setup>
     const c = useConstants();
+    const configStore = useConfigStore();
     const showHamburgerMenu = ref(false);
 
     function onLinkClick(id) {
