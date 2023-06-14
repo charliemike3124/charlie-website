@@ -71,6 +71,10 @@
 <style lang="scss" scoped>
     .contact-form {
         max-width: 600px;
-        min-width: 400px;
+        min-width: 340px;
+
+        @media (min-width: 768px) {
+            min-width: 400px;
+        }
     }
 </style>
