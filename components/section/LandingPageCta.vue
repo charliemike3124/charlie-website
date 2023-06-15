@@ -33,9 +33,11 @@
                             {{ configStore.msg.buttons.solutions }} <UiIcon icon="arrowDownRight" class="!w-4 !h-4" />
                         </UiButton>
                     </a>
-                    <UiButton data-aos="fade-right" data-aos-delay="600" outlined @click="$emit('showContactForm')">
-                        {{ configStore.msg.buttons.contact }}
-                    </UiButton>
+                    <a href="#contact-form">
+                        <UiButton data-aos="fade-right" data-aos-delay="600" outlined>
+                            {{ configStore.msg.buttons.contact }}
+                        </UiButton>
+                    </a>
                 </div>
             </div>
             <div class="img-container">

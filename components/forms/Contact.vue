@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-form">
+    <div class="contact-form" id="contact-form">
         <form @submit.prevent.stop="onSubmit" class="flex flex-col gap-4 text-left">
             <label for="name">{{ configStore.msg.form.name }}</label>
             <input

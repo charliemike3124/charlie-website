@@ -6,7 +6,7 @@
 
             <div class="flex flex-col items-center gap-4">
                 <div>
-                    <nuxt-img format="webp" loading="lazy" src="/me-nobg.png" alt="Charlie Villalobos" id="me-img" />
+                    <nuxt-img format="webp" loading="lazy" src="/me-nobg.webp" alt="Charlie Villalobos" id="me-img" />
                 </div>
                 <p class="text-center text-2xl font-semibold" data-aos="fade-right">
                     {{ configStore.msg.aboutMe.name }}
@@ -101,7 +101,7 @@
         { import: "css.png", name: "CSS" },
         { import: "javascript.png", name: "JavaScript" },
         { import: "typescript.png", name: "TypeScript" },
-        { import: "cSharp.png", name: "Python" },
+        { import: "cSharp.png", name: "C#" },
         { import: "python.png", name: "Python" },
         { import: "aws.png", name: "AWS" },
         { import: "sql.png", name: "SQL" },

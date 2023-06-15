@@ -30,9 +30,9 @@
                         {{ configStore.msg.services.subtitle }}
                     </p>
                     <div class="flex justify-center lg:justify-start">
-                        <UiButton class="lg:translate-y-8" primary @click="$emit('showContactForm')">{{
-                            configStore.msg.buttons.contact
-                        }}</UiButton>
+                        <a href="#contact-form">
+                            <UiButton class="lg:translate-y-8" primary>{{ configStore.msg.buttons.contact }}</UiButton>
+                        </a>
                     </div>
                 </div>
             </div>

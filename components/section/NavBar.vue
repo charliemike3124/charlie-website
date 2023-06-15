@@ -41,15 +41,11 @@
                 </li>
 
                 <li>
-                    <UiButton
-                        data-aos="fade-right"
-                        data-aos-delay="600"
-                        @click="$emit('showContactForm')"
-                        primary
-                        class="hidden md:block"
-                    >
-                        {{ configStore.msg.buttons.contact }}
-                    </UiButton>
+                    <a href="#contact-form">
+                        <UiButton data-aos="fade-right" data-aos-delay="600" primary class="hidden md:block">
+                            {{ configStore.msg.buttons.contact }}
+                        </UiButton>
+                    </a>
                 </li>
             </ul>
         </nav>

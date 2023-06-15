@@ -14,46 +14,46 @@
 <script setup>
     const configStore = useConfigStore();
 
-    const solutions = reactive([
+    const solutions = ref([
         {
             title: configStore.msg.solutions.peopleFinders,
             href: "https://www.peoplefinders.com/",
-            img: "/peoplefinders-thumb.png",
+            img: "/peoplefinders-thumb.webp",
             description: `${configStore.msg.solutions.teamProject}, Web App`,
             type: "Web-Apps",
         },
         {
             title: configStore.msg.solutions.ntune,
             href: "https://www.relativity.com/data-solutions/customizations/app-hub/ntune/",
-            img: "/ntune.png",
+            img: "/ntune.webp",
             description: `${configStore.msg.solutions.teamProject}, ${configStore.msg.solutions.realtime}, Web App`,
             type: "Web-Apps",
         },
         {
             title: configStore.msg.solutions.duranyalvarez,
             href: "https://www.duranyalvarez.com/ ",
-            img: "duranyalvarez-thumb.png",
+            img: "duranyalvarez.webp",
             description: `${configStore.msg.solutions.soloProject}, ${configStore.msg.solutions.portfolio}, Blog`,
             type: "Blogs",
         },
         {
             title: configStore.msg.solutions.mibanco,
             href: "https://www.mibanco.com.co/#!inicio",
-            img: "mibanco-thumb.png",
+            img: "mibanco.webp",
             description: `${configStore.msg.solutions.teamProject}, Dashboard, ${configStore.msg.solutions.bank}`,
             type: "Web-Apps",
         },
         {
             title: configStore.msg.solutions.fundacion,
             href: "https://portales.fundaciondelamujer.com/",
-            img: "fundaciondelamujer-thumb.png",
+            img: "fundacion.webp",
             description: `${configStore.msg.solutions.teamProject}, Dashboard, ${configStore.msg.solutions.bank}`,
             type: "Web-Apps",
         },
         {
             title: configStore.msg.solutions.pcfactory,
             href: "https://www.pcfactory.cl/ ",
-            img: "pcfactory-thumb.png",
+            img: "pcfactory.webp",
             description: `${configStore.msg.solutions.teamProject}, E-Commerce, Web App`,
             type: "E-commerce",
         },

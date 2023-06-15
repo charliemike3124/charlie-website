@@ -2,13 +2,13 @@
     <div class="footer text-white bg-radial-gradient-2 relative overflow-hidden">
         <nuxt-img
             format="webp"
-            src="/bg.png"
+            src="/bg.webp"
             alt="Side fade"
             class="absolute top-0 left-0 opacity-5 w-full pointer-events-none"
         />
         <nuxt-img
             format="webp"
-            src="/cta-bottom.png"
+            src="/cta-bottom.webp"
             alt="Bottom fade"
             class="absolute w-screen rotate-180"
             style="top: -1px"
